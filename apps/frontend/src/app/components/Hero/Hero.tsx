@@ -222,35 +222,89 @@ const Hero = () => {
                     ¿Qué servicios ofrecemos?
                 </h2>
 
-                <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {/* Service Card 1 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4">
-                        <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center">
+                    {/* Left Card - Diseño UX/UI */}
+                    <div className="w-full rounded-2xl border-2 border-dashed border-[#ff6b6b] bg-transparent p-6 flex flex-col gap-4 lg:max-w-[260px] lg:flex-shrink-0">
+                        <h3 className="text-xl font-bold text-[#ff6b6b] [font-family:var(--font-heading)]">
                             Diseño UX/UI
                         </h3>
-                        <p className="text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
-                        </p>
+                        <ul className="space-y-2 text-lg text-[#c7c7c1]">
+                            <li>• Research y arquitectura de información</li>
+                            <li>• Diseño de interfaces y prototipado en Figma</li>
+                            <li>• Diseño responsive y creación de UI Kits</li>
+                        </ul>
                     </div>
 
-                    {/* Service Card 2 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4">
-                        <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                            Desarrollo front-end y backend
-                        </h3>
-                        <p className="text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
-                        </p>
+                    {/* Center Orbital SVG */}
+                    <div className="flex flex-1 items-center justify-center">
+                        <svg
+                            viewBox="0 0 400 400"
+                            className="h-[364px] w-[364px] md:h-[494px] md:w-[494px]"
+                        >
+                            {/* Dashed concentric circles */}
+                            <circle cx="200" cy="200" r="175" fill="none" stroke="#ffffff" strokeWidth="1" strokeDasharray="6 5" opacity="0.3" />
+                            <circle cx="200" cy="200" r="125" fill="none" stroke="#ffffff" strokeWidth="1" strokeDasharray="6 5" opacity="0.3" />
+                            <circle cx="200" cy="200" r="75" fill="none" stroke="#ffffff" strokeWidth="1" strokeDasharray="6 5" opacity="0.3" />
+
+                            {/* Center circle */}
+                            <circle cx="200" cy="200" r="35" fill="#fffef9" />
+
+                            {/* Red Planet 1 — upper-left, outer ring */}
+                            <motion.g
+                                animate={{ scale: [1, 1.18, 1] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                                style={{ transformOrigin: "62px 108px" }}
+                            >
+                                <circle cx="62" cy="108" r="28" fill="#ff6b6b" />
+                                <text x="62" y="108" textAnchor="middle" dominantBaseline="middle" fill="black" fontSize="16" fontWeight="bold">1</text>
+                            </motion.g>
+
+                            {/* Yellow Planet 2 — lower-right, outer ring */}
+                            <motion.g
+                                animate={{ scale: [1, 1.18, 1] }}
+                                transition={{ duration: 2.3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+                                style={{ transformOrigin: "265px 312px" }}
+                            >
+                                <circle cx="265" cy="312" r="24" fill="#ffed5c" />
+                                <text x="265" y="312" textAnchor="middle" dominantBaseline="middle" fill="black" fontSize="14" fontWeight="bold">2</text>
+                            </motion.g>
+
+                            {/* Blue Planet 3 — right, middle ring */}
+                            <motion.g
+                                animate={{ scale: [1, 1.18, 1] }}
+                                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                                style={{ transformOrigin: "312px 135px" }}
+                            >
+                                <circle cx="312" cy="135" r="20" fill="#6b7dff" />
+                                <text x="312" y="135" textAnchor="middle" dominantBaseline="middle" fill="black" fontSize="13" fontWeight="bold">3</text>
+                            </motion.g>
+                        </svg>
                     </div>
 
-                    {/* Service Card 3 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4">
-                        <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                            Mantenimiento del la web
-                        </h3>
-                        <p className="text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
-                        </p>
+                    {/* Right Cards */}
+                    <div className="flex w-full flex-col gap-6 lg:max-w-[260px] lg:flex-shrink-0">
+                        {/* Maintenance */}
+                        <div className="rounded-2xl border-2 border-dashed border-[#6b7dff] bg-transparent p-6 flex flex-col gap-4">
+                            <h3 className="text-xl font-bold text-[#6b7dff] [font-family:var(--font-heading)]">
+                                Mantenimiento de la web
+                            </h3>
+                            <ul className="space-y-2 text-lg text-[#c7c7c1]">
+                                <li>• Testing final y optimización antes del lanzamiento</li>
+                                <li>• Configuración de entorno de producción</li>
+                                <li>• Deploy en producción y monitoreo post-lanzamiento</li>
+                            </ul>
+                        </div>
+                        {/* Development */}
+                        <div className="rounded-2xl border-2 border-dashed border-[#ffed5c] bg-transparent p-6 flex flex-col gap-4">
+                            <h3 className="text-xl font-bold text-[#ffed5c] [font-family:var(--font-heading)]">
+                                Desarrollo front-end y backend
+                            </h3>
+                            <ul className="space-y-2 text-lg text-[#c7c7c1]">
+                                <li>• Landing pages, e-commerce</li>
+                                <li>• Desarrollo front-end (React, NextJS, TypeScript y TailwindCSS)</li>
+                                <li>• Desarrollo back-end (bases de datos, integraciones y paneles)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

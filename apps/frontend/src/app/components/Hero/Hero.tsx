@@ -23,7 +23,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="mt-8 max-w-[880px] text-pretty text-[17px] leading-relaxed text-[#deded7]">
-                        En Orbitadev creamos sitios web y productos digitales enfocados en la experiencia
+                        En nextorbita creamos sitios web y productos digitales enfocados en la experiencia
                         de usuario, el rendimiento y el crecimiento de tu negocio. Combinamos diseño UX/UI,
                         desarrollo front-end y back-end para construir soluciones digitales claras,
                         funcionales y escalables.
@@ -79,7 +79,7 @@ const Hero = () => {
                     {/* Left side text content */}
                     <div className="flex flex-col gap-8">
                         <p className="text-lg leading-relaxed text-[#deded7]">
-                            Somos Orbitadev, una agencia de diseño web y desarrollo web enfocada en crear experiencias digitales funcionales, atractivas y pensadas para crecer junto a cada proyecto.
+                            Somos nextorbita, una agencia de diseño web y desarrollo web enfocada en crear experiencias digitales funcionales, atractivas y pensadas para crecer junto a cada proyecto.
                         </p>
 
                         <p className="text-lg leading-relaxed text-[#deded7]">
@@ -145,11 +145,11 @@ const Hero = () => {
         </section>
 
         {/* Team Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="sobre-nosotros" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
                     <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                        ¿Quiénes forman parte de orbitadev?
+                        ¿Quiénes forman parte de nextorbita?
                     </h2>
                     <p className="max-w-[700px] text-lg text-[#deded7]">
                         Equipo especializado en UX/UI, front-end y back-end trabajando de forma colaborativa desde la etapa inicial del proyecto.
@@ -216,7 +216,7 @@ const Hero = () => {
         </section>
 
         {/* Services Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="servicios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
                     ¿Qué servicios ofrecemos?
@@ -457,7 +457,7 @@ const Hero = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="testimonios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-center text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     ¿Qué opinan nuestros clientes?
@@ -522,7 +522,7 @@ const Hero = () => {
         </section>
 
         {/* Portfolio Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="porfolio" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
                     <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
@@ -593,7 +593,7 @@ const Hero = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="qa" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     Preguntas Frecuentes

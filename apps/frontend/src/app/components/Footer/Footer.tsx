@@ -14,11 +14,11 @@ const Footer = () => {
               className="inline-flex w-fit"
             >
               <Image
-                src="/orbita-logo-black.svg"
+                src="/nex-orbita-logo-black.svg"
                 alt="Orbitadev"
                 width={248}
                 height={64}
-                className="h-auto w-[170px] sm:w-[210px] md:w-[248px]"
+                className="h-auto w-[80px] sm:w-[110px] md:w-[169px]"
               />
             </a>
             <p className="text-sm leading-relaxed text-[#4a4a4a]">
@@ -165,7 +165,7 @@ const Footer = () => {
                     href="mailto:orbitadevmail@gmail.com"
                     className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
                   >
-                    orbitadevmail@gmail.com
+                    nextorbita@gmail.com
                   </a>
                 </li>
               </ul>

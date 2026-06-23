@@ -22,10 +22,11 @@ const Footer = () => {
               />
             </a>
             <p className="text-sm leading-relaxed text-[#4a4a4a]">
-              &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit.
-              Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
-              cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed
-              diam urna tempor&quot;
+              En nextorbita creamos sitios web y productos digitales enfocados
+              en la experiencia de usuario, el rendimiento y el crecimiento de
+              tu negocio. Combinamos diseño UX/UI, desarrollo front-end y
+              back-end para construir soluciones digitales claras, funcionales y
+              escalables.
             </p>
             <div className="flex gap-4">
               <a
@@ -179,7 +180,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex items-center justify-center">
           <p className="text-sm text-[#4a4a4a]">
-            © 2026 - by <span className="font-semibold">orbitadev</span>
+            © 2026 - by <span className="font-semibold">nextorbita</span>
           </p>
         </div>
       </div>

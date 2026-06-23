@@ -657,10 +657,10 @@ const Hero = () => {
                 <div className="flex w-full flex-col gap-4">
                     {/* FAQ Item 1 */}
                     <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
+                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
                             <span>¿Cómo es el proceso de trabajo para un nuevo proyecto?</span>
                             <svg
-                                className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
+                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -675,10 +675,10 @@ const Hero = () => {
 
                     {/* FAQ Item 2 */}
                     <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
+                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
                             <span>¿Cuánto tiempo lleva desarrollar una página web?</span>
                             <svg
-                                className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
+                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -693,10 +693,10 @@ const Hero = () => {
 
                     {/* FAQ Item 3 */}
                     <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
+                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
                             <span>¿Mi sitio web será adaptable a dispositivos móviles?</span>
                             <svg
-                                className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
+                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -711,10 +711,10 @@ const Hero = () => {
 
                     {/* FAQ Item 4 */}
                     <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
+                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
                             <span>¿Pueden rediseñar o mejorar un sitio web existente?</span>
                             <svg
-                                className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
+                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"

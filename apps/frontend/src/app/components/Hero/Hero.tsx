@@ -160,9 +160,13 @@ const Hero = () => {
                     {/* Team Member 1 */}
                     <div className="flex flex-col items-center gap-6">
                         <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                            <div className="h-full w-full flex items-center justify-center bg-[#3a3a3a] text-xl font-bold text-[#9df74d]">
-                                CA
-                            </div>
+                            <Image
+                                src="/foto-chris.png"
+                                alt="Paloma Herrera"
+                                width={200}
+                                height={200}
+                                className="h-full w-full object-cover"
+                            />
                         </div>
                         <div className="flex flex-col items-center gap-2">
                             <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
@@ -518,59 +522,88 @@ const Hero = () => {
                     ¿Qué opinan nuestros clientes?
                 </h2>
 
-                <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
-                    {/* Testimonial 1 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-6">
-                        <div className="flex items-center gap-4">
-                            <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                                <Image
-                                    src="/vivi-foto.svg"
-                                    alt="Nombre Completo"
-                                    width={64}
-                                    height={64}
-                                    className="h-full w-full object-cover"
-                                />
+                <div className="flex w-full flex-col gap-8">
+                    {/* Top row — 2 cards */}
+                    <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
+                        {/* Testimonial 1 — Viviana */}
+                        <div className="rounded-3xl border-2 border-dashed border-[#6b7dff] bg-transparent p-8 flex flex-col gap-6">
+                            <div className="flex items-center gap-4">
+                                <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#6b7dff]">
+                                    <Image
+                                        src="/vivi-foto.svg"
+                                        alt="Viviana Urbaneja"
+                                        width={64}
+                                        height={64}
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-[#6b7dff]">
+                                        Viviana Urbaneja
+                                    </h3>
+                                    <p className="text-sm text-[#c7c7c1]">
+                                        Vivaldi Marketing - Co-Founder
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="font-semibold text-[#9df74d]">
-                                    Viviana Urbaneja
-                                </h3>
-                                <p className="text-sm text-[#c7c7c1]">
-                                    Vivaldi Marketing - Co-Founder
-                                </p>
-                            </div>
+                            <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
+                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
+                            </blockquote>
                         </div>
 
-                        <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic">
-                            &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
-                        </blockquote>
+                        {/* Testimonial 2 — Diana */}
+                        <div className="rounded-3xl border-2 border-dashed border-[#ffed5c] bg-transparent p-8 flex flex-col gap-6">
+                            <div className="flex items-center gap-4">
+                                <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#ffed5c]">
+                                    <Image
+                                        src="/diana-foto.svg"
+                                        alt="Diana Pompa Morris"
+                                        width={64}
+                                        height={64}
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-[#ffed5c]">
+                                        Diana Pompa Morris
+                                    </h3>
+                                    <p className="text-sm text-[#c7c7c1]">
+                                        Dictum - Founder &amp; Lead Quality Assurance
+                                    </p>
+                                </div>
+                            </div>
+                            <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
+                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
+                            </blockquote>
+                        </div>
                     </div>
 
-                    {/* Testimonial 2 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-6">
-                        <div className="flex items-center gap-4">
-                            <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                                <Image
-                                    src="/diana-foto.svg"
-                                    alt="Diana Pompa Morris"
-                                    width={64}
-                                    height={64}
-                                    className="h-full w-full object-cover"
-                                />
+                    {/* Bottom row — 1 card centered */}
+                    <div className="flex justify-center">
+                        <div className="w-full rounded-3xl border-2 border-dashed border-[#ff6b6b] bg-transparent p-8 flex flex-col gap-6 lg:max-w-[calc(50%-16px)]">
+                            <div className="flex items-center gap-4">
+                                <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#ff6b6b]">
+                                    <Image
+                                        src="/jorge-foto.svg"
+                                        alt="Jorge Valderrama"
+                                        width={64}
+                                        height={64}
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-[#ff6b6b]">
+                                        Jorge Valderrama
+                                    </h3>
+                                    <p className="text-sm text-[#c7c7c1]">
+                                        Vivaldi Marketing - Co-Founder
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="font-semibold text-[#9df74d]">
-                                    Diana Pompa Morris
-                                </h3>
-                                <p className="text-sm text-[#c7c7c1]">
-                                    Dictum - Founder & Lead Quality Assurance
-                                </p>
-                            </div>
+                            <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
+                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
+                            </blockquote>
                         </div>
-
-                        <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic">
-                            &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
-                        </blockquote>
                     </div>
                 </div>
             </div>

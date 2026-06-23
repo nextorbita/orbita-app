@@ -584,19 +584,19 @@ const Hero = () => {
                         Portafolio
                     </h2>
                     <p className="max-w-[800px] text-lg text-[#c7c7c1]">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
+                        Creamos sitios web pensados para las personas. En este portfolio mostramos algunos de los proyectos en los que trabajamos, combinando diseño UX/UI, desarrollo y mantenimiento para construir experiencias digitales que funcionan, se ven bien y evolucionan en el tiempo.
                     </p>
                 </div>
 
                 <div className="flex w-full flex-col gap-6">
                     {/* Portfolio Item 1 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div className="flex flex-col gap-4">
                             <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
                                 Vivaldi Marketing
                             </h3>
                             <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
+                                Para Vivaldi Marketing nos encargamos del rediseño de su sitio web. El cliente ya contaba con una parte del diseño avanzado, y nuestra tarea fue optimizar lo existente y completar el diseño del resto de las páginas para lograr una experiencia coherente y alineada con la identidad de la marca.
                             </p>
                         </div>
                         <a
@@ -605,18 +605,18 @@ const Hero = () => {
                             rel="noopener noreferrer"
                             className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0 inline-flex items-center justify-center"
                         >
-                            Ver proyecto
+                            Ver proyecto {">"}
                         </a>
                     </div>
 
                     {/* Portfolio Item 2 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div className="flex flex-col gap-4">
                             <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
                                 Dictum Translations
                             </h3>
                             <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
+                                Para Dictum Translation Solutions llevamos adelante el rediseño completo de su sitio web en español e inglés. El proceso comenzó con el diseño UX/UI en Figma y posteriormente fue implementado en WordPress. El objetivo principal fue modernizar la identidad digital de la marca, logrando un estilo contemporáneo y formal, pero al mismo tiempo dinámico y flexible, evitando una estructura rígida.
                             </p>
                         </div>
                         <a
@@ -625,22 +625,22 @@ const Hero = () => {
                             rel="noopener noreferrer"
                             className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0 inline-flex items-center justify-center"
                         >
-                            Ver proyecto
+                            Ver proyecto {">"}
                         </a>
                     </div>
 
                     {/* Portfolio Item 3 */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div className="flex flex-col gap-4">
                             <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
                                 easyemAll
                             </h3>
                             <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor
+                                EasyEmail fue un proyecto desarrollado en 5 días dentro de No Country, con el desafío de integrar inteligencia artificial para la generación automatizada de emails orientados a emprendimientos. La plataforma permite crear correos personalizados definiendo temática, tono y asunto según las necesidades del usuario, optimizando tiempos y facilitando la comunicación digital.
                             </p>
                         </div>
                         <button className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0">
-                            Ver proyecto
+                            Ver proyecto {">"}
                         </button>
                     </div>
                 </div>
@@ -656,9 +656,9 @@ const Hero = () => {
 
                 <div className="flex w-full flex-col gap-4">
                     {/* FAQ Item 1 */}
-                    <details className="group rounded-3xl border-2 border-[#9df74d] p-6 cursor-pointer">
+                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
                         <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
-                            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit.</span>
+                            <span>¿Cómo es el proceso de trabajo para un nuevo proyecto?</span>
                             <svg
                                 className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
@@ -674,9 +674,9 @@ const Hero = () => {
                     </details>
 
                     {/* FAQ Item 2 */}
-                    <details className="group rounded-3xl border-2 border-[#9df74d] p-6 cursor-pointer">
+                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
                         <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
-                            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit.</span>
+                            <span>¿Cuánto tiempo lleva desarrollar una página web?</span>
                             <svg
                                 className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
@@ -692,9 +692,9 @@ const Hero = () => {
                     </details>
 
                     {/* FAQ Item 3 */}
-                    <details className="group rounded-3xl border-2 border-[#9df74d] p-6 cursor-pointer">
+                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
                         <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
-                            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit.</span>
+                            <span>¿Mi sitio web será adaptable a dispositivos móviles?</span>
                             <svg
                                 className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"
@@ -710,9 +710,9 @@ const Hero = () => {
                     </details>
 
                     {/* FAQ Item 4 */}
-                    <details className="group rounded-3xl border-2 border-[#9df74d] p-6 cursor-pointer">
+                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
                         <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] transition-colors duration-200">
-                            <span>Lorem ipsum dolor sit amet consectetur adipiscing elit.</span>
+                            <span>¿Pueden rediseñar o mejorar un sitio web existente?</span>
                             <svg
                                 className="h-6 w-6 text-[#9df74d] transition-transform group-open:rotate-180"
                                 fill="none"

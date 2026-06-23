@@ -319,18 +319,18 @@ const Hero = () => {
 
                 <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {/* Plan 1 - NOVA */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-6">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
                         <div>
-                            <p className="text-xs font-bold uppercase text-[#9df74d] tracking-widest">
+                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
                                 Estandar
                             </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
                                 Plan NOVA
                             </h3>
                         </div>
 
                         <div>
-                            <p className="inline-block rounded-full border border-[#9df74d] px-4 py-1 text-xs text-[#9df74d]">
+                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
                                 Entrega Estimado: 2 a 3 Semanas
                             </p>
                         </div>
@@ -345,7 +345,7 @@ const Hero = () => {
                         </div>
 
                         <div>
-                            <p className="text-xs font-semibold uppercase text-[#9df74d] mb-3">
+                            <p className="text-xs font-semibold uppercase mb-3">
                                 Incluye:
                             </p>
                             <ul className="space-y-2">
@@ -372,24 +372,24 @@ const Hero = () => {
                             </ul>
                         </div>
 
-                        <button className="w-full rounded-lg bg-[#9df74d] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Más Info
+                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
+                            Solicitar más info
                         </button>
                     </div>
 
                     {/* Plan 2 - ONIX */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-6">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
                         <div>
-                            <p className="text-xs font-bold uppercase text-[#9df74d] tracking-widest">
+                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
                                 Premium
                             </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
                                 Plan ONIX
                             </h3>
                         </div>
 
                         <div>
-                            <p className="inline-block rounded-full border border-[#9df74d] px-4 py-1 text-xs text-[#9df74d]">
+                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
                                 Entrega Estimado: 3 a 4 Semanas
                             </p>
                         </div>
@@ -404,7 +404,7 @@ const Hero = () => {
                         </div>
 
                         <div>
-                            <p className="text-xs font-semibold uppercase text-[#9df74d] mb-3">
+                            <p className="text-xs font-semibold uppercase mb-3">
                                 Incluye:
                             </p>
                             <ul className="space-y-2">
@@ -443,24 +443,24 @@ const Hero = () => {
                             </ul>
                         </div>
 
-                        <button className="w-full rounded-lg bg-[#9df74d] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Más Info
+                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
+                            Solicitar más info
                         </button>
                     </div>
 
                     {/* Plan 3 - ÓRBITA */}
-                    <div className="rounded-3xl border-2 border-[#9df74d] bg-transparent p-8 flex flex-col gap-6">
+                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
                         <div>
-                            <p className="text-xs font-bold uppercase text-[#9df74d] tracking-widest">
+                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
                                 Personalizado
                             </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
                                 Plan ÓRBITA
                             </h3>
                         </div>
 
                         <div>
-                            <p className="inline-block rounded-full border border-[#9df74d] px-4 py-1 text-xs text-[#9df74d]">
+                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
                                 Entrega Estimado: A Definir
                             </p>
                         </div>
@@ -475,13 +475,14 @@ const Hero = () => {
                         </div>
 
                         <div>
-                            <p className="text-xs font-semibold uppercase text-[#9df74d] mb-3">
+                            <p className="text-xs font-semibold uppercase mb-3">
                                 Incluye:
                             </p>
                             <ul className="space-y-2">
                                 <li className="text-sm text-[#c7c7c1] flex gap-2">
                                     <span className="text-[#9df74d]">•</span>
-                                    <span>Incluye todo del PLAN ONIX +</span>
+                                    <span>Incluye todo del</span>
+                                    <span className='text-[#5C81FA]'>PLAN ONIX +</span>
                                 </li>
                                 <li className="text-sm text-[#c7c7c1] flex gap-2">
                                     <span className="text-[#9df74d]">•</span>
@@ -502,8 +503,8 @@ const Hero = () => {
                             </ul>
                         </div>
 
-                        <button className="w-full rounded-lg bg-[#9df74d] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Más Info
+                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
+                            Solicitar más info
                         </button>
                     </div>
                 </div>

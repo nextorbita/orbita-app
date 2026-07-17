@@ -1,6 +1,13 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+  const menuItems = t.raw("menuItems") as string[];
+  const portfolioItems = t.raw("portfolioItems") as string[];
+
   return (
     <footer className="bg-[#f5f5f0] text-[#1a1a1a] py-16 md:py-20">
       <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
@@ -10,7 +17,7 @@ const Footer = () => {
           <div className="flex flex-col gap-6 md:col-span-1 w-3/4">
             <a
               href="#"
-              aria-label="Ir al inicio de Orbitadev"
+              aria-label={t("logoAlt")}
               className="inline-flex w-fit"
             >
               <Image
@@ -22,11 +29,7 @@ const Footer = () => {
               />
             </a>
             <p className="text-sm leading-relaxed text-[#4a4a4a]">
-              En nextorbita creamos sitios web y productos digitales enfocados
-              en la experiencia de usuario, el rendimiento y el crecimiento de
-              tu negocio. Combinamos diseño UX/UI, desarrollo front-end y
-              back-end para construir soluciones digitales claras, funcionales y
-              escalables.
+              {t("description")}
             </p>
             <div className="flex gap-4">
               <a
@@ -76,89 +79,45 @@ const Footer = () => {
             {/* Menu Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
-                Menu
+                {t("menuTitle")}
               </h3>
               <ul className="flex flex-col gap-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Sobre Nosotros
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Equipo
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Servicios
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Testimonios
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Q&A
-                  </a>
-                </li>
+                {menuItems.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Portfolio Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
-                Porfolio
+                {t("portfolioTitle")}
               </h3>
               <ul className="flex flex-col gap-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Vivaldi Marketing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    Dictum Translations
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
-                  >
-                    easyemAll
-                  </a>
-                </li>
+                {portfolioItems.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Contact Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
-                Contacto
+                {t("contactTitle")}
               </h3>
               <ul className="flex flex-col gap-3">
                 <li>
@@ -166,7 +125,7 @@ const Footer = () => {
                     href="mailto:orbitadevmail@gmail.com"
                     className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
                   >
-                    nextorbita@gmail.com
+                    {t("email")}
                   </a>
                 </li>
               </ul>
@@ -180,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex items-center justify-center">
           <p className="text-sm text-[#4a4a4a]">
-            © 2026 - by <span className="font-semibold">nextorbita</span>
+            {t("copyright")} <span className="font-semibold">nextorbita</span>
           </p>
         </div>
       </div>

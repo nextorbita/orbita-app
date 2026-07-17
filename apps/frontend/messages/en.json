@@ -1,0 +1,209 @@
+{
+  "Header": {
+    "logoAlt": "Go to Orbitadev home",
+    "nav": {
+      "about": "About Us",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "portfolio": "Portfolio",
+      "qa": "Q&A",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "title": "Your digital project, on the right orbit",
+    "description": "At nextorbita we build websites and digital products focused on user experience, performance and the growth of your business. We combine UX/UI design, front-end and back-end development to build clear, functional and scalable digital solutions.",
+    "ctaContact": "Let's keep in touch",
+    "ctaMore": "I want to know more"
+  },
+  "About": {
+    "title": "Who are we?",
+    "paragraphs": [
+      "We are nextorbita, a web design and web development agency focused on creating functional, appealing digital experiences designed to grow alongside each project.",
+      "We work closely and collaboratively, getting involved in every stage of the process from defining the idea, designing the user experience and interface, to technical development and product maintenance.",
+      "Our approach combines UX/UI design, front-end development and back-end development, prioritizing usability, performance and scalability. We build clear websites that are easy to maintain and ready to evolve over time, supporting each client's digital growth."
+    ]
+  },
+  "Team": {
+    "title": "Who is part of nextorbita?",
+    "subtitle": "A team specialized in UX/UI, front-end and back-end working collaboratively from the very first stage of the project.",
+    "members": [
+      {
+        "name": "Christian Aránguiz",
+        "bio": "I'm a Full Stack developer specialized in Frontend, focused on building modern, intuitive and optimized user interfaces. I work mainly on web development with React, Next.js, TypeScript and Tailwind, integrating AI-powered solutions and efficient architectures. I complement my profile with experience in Project Management, data analytics and CRM automation."
+      },
+      {
+        "name": "Paloma Herrera",
+        "bio": "She studied Systems Analysis and has previous experience as a developer, which allows her to deeply understand both design and technology. She currently focuses on UX/UI design, an area in which she has trained through various courses and a Master's in UX/UI at Nuclio Digital School. She designs clear, functional experiences aligned with business goals."
+      },
+      {
+        "name": "Martin Valdes",
+        "bio": "I'm a Full Stack developer specialized in Backend, focused on building robust, scalable and secure solutions. I work mainly on the development and maintenance of server-side architectures, integrating APIs and efficient business logic. I complement my profile as a developer with training in data networks and cybersecurity, both defensive and offensive."
+      }
+    ]
+  },
+  "Services": {
+    "title": "What services do we offer?",
+    "cards": [
+      {
+        "title": "UX/UI Design",
+        "items": [
+          "Research and information architecture",
+          "Interface design and prototyping in Figma",
+          "Responsive design and UI Kit creation"
+        ]
+      },
+      {
+        "title": "Website Maintenance",
+        "items": [
+          "Final testing and optimization before launch",
+          "Production environment setup",
+          "Production deployment and post-launch monitoring"
+        ]
+      },
+      {
+        "title": "Front-end and Back-end Development",
+        "items": [
+          "Landing pages, e-commerce",
+          "Front-end development (React, NextJS, TypeScript and TailwindCSS)",
+          "Back-end development (databases, integrations and dashboards)"
+        ]
+      }
+    ]
+  },
+  "Pricing": {
+    "title": "Check out our plans and choose the ideal one for you",
+    "includesLabel": "Includes:",
+    "cta": "Request more info",
+    "plans": [
+      {
+        "tag": "Standard",
+        "name": "NOVA Plan",
+        "delivery": "Estimated Delivery: 2 to 3 Weeks",
+        "price": "From USD 400",
+        "description": "Ideal for personal brands, company launches or ventures that need a fast, modern and effective online presence.",
+        "features": [
+          "Complete UX/UI design in FIGMA",
+          "WordPress implementation",
+          "Responsive site",
+          "3 revisions",
+          "Full hosting, domain and SSL security setup"
+        ]
+      },
+      {
+        "tag": "Premium",
+        "name": "ONIX Plan",
+        "delivery": "Estimated Delivery: 3 to 4 Weeks",
+        "price": "From USD 800",
+        "description": "Ideal for companies or brands seeking a professional online presence that need a comprehensive solution.",
+        "features": [
+          "Complete UX/UI design in FIGMA",
+          "UI Kit and design manual",
+          "Front-end + basic back-end development",
+          "APIs",
+          "Responsive site",
+          "5 pre-launch revisions",
+          "Full hosting, domain and SSL security setup",
+          "Post-launch support"
+        ]
+      },
+      {
+        "tag": "Custom",
+        "name": "ÓRBITA Plan",
+        "delivery": "Estimated Delivery: To Be Defined",
+        "price": "Price: to be defined based on project requirements",
+        "description": "Ideal for companies or projects that need a 100% custom website, with specific features, advanced integrations or bespoke design from scratch.",
+        "featurePrefix": "Includes everything from the",
+        "featureHighlight": "ONIX PLAN +",
+        "features": [
+          "Strategic meeting and project analysis",
+          "Custom UX/UI architecture",
+          "Tailor-made front-end and back-end development",
+          "Unlimited revisions"
+        ]
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "What do our clients say?",
+    "items": [
+      {
+        "name": "Viviana Urbaneja",
+        "role": "Vivaldi Marketing - Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      },
+      {
+        "name": "Diana Pompa Morris",
+        "role": "Dictum - Founder & Lead Quality Assurance",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      },
+      {
+        "name": "Jorge Valderrama",
+        "role": "Vivaldi Marketing - Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      }
+    ]
+  },
+  "Portfolio": {
+    "title": "Portfolio",
+    "description": "We build websites designed for people. In this portfolio we showcase some of the projects we've worked on, combining UX/UI design, development and maintenance to build digital experiences that work, look good and evolve over time.",
+    "cta": "View project",
+    "items": [
+      {
+        "title": "Vivaldi Marketing",
+        "description": "For Vivaldi Marketing we handled the redesign of their website. The client already had part of the design in progress, and our task was to optimize the existing work and complete the design of the remaining pages to achieve a coherent experience aligned with the brand identity."
+      },
+      {
+        "title": "Dictum Translations",
+        "description": "For Dictum Translation Solutions we carried out a complete redesign of their website in Spanish and English. The process started with UX/UI design in Figma and was later implemented in WordPress. The main goal was to modernize the brand's digital identity, achieving a contemporary and formal style that was also dynamic and flexible, avoiding a rigid structure."
+      },
+      {
+        "title": "easyemAll",
+        "description": "EasyEmail was a project developed in 5 days within No Country, with the challenge of integrating artificial intelligence for the automated generation of emails aimed at entrepreneurs. The platform allows users to create personalized emails by defining topic, tone and subject according to their needs, optimizing time and streamlining digital communication."
+      }
+    ]
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is the work process for a new project?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "How long does it take to develop a website?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "Will my website be mobile-friendly?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "Can you redesign or improve an existing website?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Let's keep in touch",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "submit": "Send"
+  },
+  "Footer": {
+    "logoAlt": "Go to Orbitadev home",
+    "description": "At nextorbita we build websites and digital products focused on user experience, performance and the growth of your business. We combine UX/UI design, front-end and back-end development to build clear, functional and scalable digital solutions.",
+    "menuTitle": "Menu",
+    "menuItems": ["About Us", "Team", "Services", "Testimonials", "Q&A"],
+    "portfolioTitle": "Portfolio",
+    "portfolioItems": ["Vivaldi Marketing", "Dictum Translations", "easyemAll"],
+    "contactTitle": "Contact",
+    "email": "nextorbita@gmail.com",
+    "copyright": "© 2026 - by"
+  },
+  "LanguageToggle": {
+    "ariaLabel": "Switch language"
+  }
+}

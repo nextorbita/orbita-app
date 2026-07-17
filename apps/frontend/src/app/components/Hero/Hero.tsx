@@ -2,9 +2,35 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Header from "../Header/Header";
 
+type TeamMember = { name: string; bio: string };
+type ServiceCard = { title: string; items: string[] };
+type PricingPlan = {
+    tag: string;
+    name: string;
+    delivery: string;
+    price: string;
+    description: string;
+    featurePrefix?: string;
+    featureHighlight?: string;
+    features: string[];
+};
+type Testimonial = { name: string; role: string; quote: string };
+type PortfolioItem = { title: string; description: string };
+type FaqItem = { question: string; answer: string };
+
 const Hero = () => {
+    const t = useTranslations();
+    const teamMembers = t.raw("Team.members") as TeamMember[];
+    const serviceCards = t.raw("Services.cards") as ServiceCard[];
+    const pricingPlans = t.raw("Pricing.plans") as PricingPlan[];
+    const testimonials = t.raw("Testimonials.items") as Testimonial[];
+    const portfolioItems = t.raw("Portfolio.items") as PortfolioItem[];
+    const faqItems = t.raw("Faq.items") as FaqItem[];
+    const aboutParagraphs = t.raw("About.paragraphs") as string[];
+
     return (
         <>
         <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] min-h-screen">
@@ -19,14 +45,11 @@ const Hero = () => {
 
                 <div className="mx-auto flex w-full max-w-[900px] grow flex-col items-center justify-center pt-16 text-center md:pt-20">
                     <h1 className="max-w-[13ch] text-balance text-4xl font-semibold leading-[1.25] text-[#9df74d] [font-family:var(--font-heading)] sm:text-5xl lg:text-[68px] lg:leading-[1.16]">
-                        Tu proyecto digital, en la órbita correcta
+                        {t("Hero.title")}
                     </h1>
 
                     <p className="mt-8 max-w-[880px] text-pretty text-[17px] leading-relaxed text-[#deded7]">
-                        En nextorbita creamos sitios web y productos digitales enfocados en la experiencia
-                        de usuario, el rendimiento y el crecimiento de tu negocio. Combinamos diseño UX/UI,
-                        desarrollo front-end y back-end para construir soluciones digitales claras,
-                        funcionales y escalables.
+                        {t("Hero.description")}
                     </p>
 
                     <div className="mt-12 flex w-full max-w-[560px] flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
@@ -34,13 +57,13 @@ const Hero = () => {
                             href="#contacto-formulario"
                             className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#efefe8] px-8 text-lg font-semibold text-[#2b2b2a] transition-transform duration-200 hover:-translate-y-0.5 sm:w-[260px]"
                         >
-                            Sigamos en contacto
+                            {t("Hero.ctaContact")}
                         </a>
                         <a
                             href="#"
                             className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-transparent px-8 text-lg font-medium text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
                         >
-                            Quiero saber más
+                            {t("Hero.ctaMore")}
                         </a>
                     </div>
 
@@ -72,23 +95,17 @@ const Hero = () => {
         <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                    ¿Quiénes somos?
+                    {t("About.title")}
                 </h2>
 
                 <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left side text content */}
                     <div className="flex flex-col gap-8">
-                        <p className="text-lg leading-relaxed text-[#deded7]">
-                            Somos nextorbita, una agencia de diseño web y desarrollo web enfocada en crear experiencias digitales funcionales, atractivas y pensadas para crecer junto a cada proyecto.
-                        </p>
-
-                        <p className="text-lg leading-relaxed text-[#deded7]">
-                            Trabajamos de forma cercana y colaborativa, involucrándosnos en cada etapa del proceso desde la definición de la idea, el diseño de la experiencia de usuario y la interfaz, hasta el desarrollo técnico y el mantenimiento del producto.
-                        </p>
-
-                        <p className="text-lg leading-relaxed text-[#deded7]">
-                            Nuestro enfoque combina diseño UX/UI, desarrollo front-end y desarrollo back-end, priorizando la usabilidad, el rendimiento y la escalabilidad. Creamos sitios web claros, fáciles de mantener y preparados para evolucionar en el tiempo, acompañando al crecimiento digital de cada cliente.
-                        </p>
+                        {aboutParagraphs.map((paragraph) => (
+                            <p key={paragraph} className="text-lg leading-relaxed text-[#deded7]">
+                                {paragraph}
+                            </p>
+                        ))}
                     </div>
 
                     {/* Right side visualization with concentric circles */}
@@ -149,76 +166,44 @@ const Hero = () => {
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
                     <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                        ¿Quiénes forman parte de nextorbita?
+                        {t("Team.title")}
                     </h2>
                     <p className="max-w-[700px] text-lg text-[#deded7]">
-                        Equipo especializado en UX/UI, front-end y back-end trabajando de forma colaborativa desde la etapa inicial del proyecto.
+                        {t("Team.subtitle")}
                     </p>
                 </div>
 
                 <div className="grid w-full grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-                    {/* Team Member 1 */}
-                    <div className="flex flex-col items-center gap-6">
-                        <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                            <Image
-                                src="/foto-chris.png"
-                                alt="Christian Aranguiz"
-                                width={200}
-                                height={200}
-                                className="h-full w-full object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                Christian Aránguiz
-                            </h3>
-                        </div>
-                        <p className="text-center text-sm leading-relaxed text-[#deded7]">
-                            Soy desarrollador Full Stack especializado en Frontend, enfocado en la creación de interfaces de usuario modernas, intuitivas y optimizadas. Trabajo principalmente en el desarrollo web con React, Next.js, TypeScript y Tailwind, integrando soluciones con IA y arquitecturas eficientes. Complemento mi perfil con experiencia en Project Management, analítica de datos y automatización de CRMs.  
-                        </p>
-                    </div>
+                    {teamMembers.map((member, index) => {
+                        const teamImages = [
+                            { src: "/foto-chris.png", imgClassName: "h-full w-full object-cover" },
+                            { src: "/foto-paloma.svg", imgClassName: "h-full w-full object-cover" },
+                            { src: "/foto_martin.jpeg", imgClassName: "h-70 w-full object-cover" },
+                        ];
+                        const image = teamImages[index];
 
-                    {/* Team Member 2 */}
-                    <div className="flex flex-col items-center gap-6">
-                        <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                            <Image
-                                src="/foto-paloma.svg"
-                                alt="Paloma Herrera"
-                                width={200}
-                                height={200}
-                                className="h-full w-full object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                Paloma Herrera
-                            </h3>
-                        </div>
-                        <p className="text-center text-sm leading-relaxed text-[#dedad7]">
-                            Ha estudiado la carrera de Analista de Sistemas y cuenta con experiencia previa como desarrolladora, lo que le permite comprender en profundidad el nivel de diseño y tecnología. Actualmente se enfoca en el área de diseño UX/UI, en la cual se ha formado a través de distintos cursos y un Master en UX/UI en Nuclio Digital School. Diseña experiencias claras, funcionales y alineadas a los objetivos del negocio.
-                        </p>
-                    </div>
-
-                    {/* Team Member 3 */}
-                    <div className="flex flex-col items-center gap-6">
-                        <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                     <Image
-                                src="/foto_martin.jpeg"
-                                alt="Martin Valdes"
-                                width={200}
-                                height={200}
-                                className="h-70 w-full object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                Martin Valdes
-                            </h3>
-                        </div>
-                        <p className="text-center text-sm leading-relaxed text-[#deded7]">
-                            Soy desarrollador Full Stack, con especialización en Backend, enfocado en la creación de soluciones robustas, escalables y seguras. Trabajo principalmente en el desarrollo y mantenimiento de arquitecturas del lado del servidor, integrando APIs y lógica de negocio eficiente. Complemento mi perfil como desarrollador con formación en redes de datos y ciberseguridad, tanto en el ámbito defensivo como ofensivo.
-                        </p>
-                    </div>
+                        return (
+                            <div key={member.name} className="flex flex-col items-center gap-6">
+                                <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
+                                    <Image
+                                        src={image.src}
+                                        alt={member.name}
+                                        width={200}
+                                        height={200}
+                                        className={image.imgClassName}
+                                    />
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                                        {member.name}
+                                    </h3>
+                                </div>
+                                <p className="text-center text-sm leading-relaxed text-[#deded7]">
+                                    {member.bio}
+                                </p>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
@@ -227,19 +212,19 @@ const Hero = () => {
         <section id="servicios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
-                    ¿Qué servicios ofrecemos?
+                    {t("Services.title")}
                 </h2>
 
                 <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center">
                     {/* Left Card - Diseño UX/UI */}
                     <div className="w-full rounded-2xl border-2 border-dashed border-[#ff6b6b] bg-transparent p-6 flex flex-col gap-4 lg:max-w-[260px] lg:flex-shrink-0">
                         <h3 className="text-xl font-bold text-[#ff6b6b] [font-family:var(--font-heading)]">
-                            Diseño UX/UI
+                            {serviceCards[0].title}
                         </h3>
                         <ul className="space-y-2 text-lg text-[#c7c7c1]">
-                            <li>• Research y arquitectura de información</li>
-                            <li>• Diseño de interfaces y prototipado en Figma</li>
-                            <li>• Diseño responsive y creación de UI Kits</li>
+                            {serviceCards[0].items.map((item) => (
+                                <li key={item}>• {item}</li>
+                            ))}
                         </ul>
                     </div>
 
@@ -294,23 +279,23 @@ const Hero = () => {
                         {/* Maintenance */}
                         <div className="rounded-2xl border-2 border-dashed border-[#6b7dff] bg-transparent p-6 flex flex-col gap-4">
                             <h3 className="text-xl font-bold text-[#6b7dff] [font-family:var(--font-heading)]">
-                                Mantenimiento de la web
+                                {serviceCards[1].title}
                             </h3>
                             <ul className="space-y-2 text-lg text-[#c7c7c1]">
-                                <li>• Testing final y optimización antes del lanzamiento</li>
-                                <li>• Configuración de entorno de producción</li>
-                                <li>• Deploy en producción y monitoreo post-lanzamiento</li>
+                                {serviceCards[1].items.map((item) => (
+                                    <li key={item}>• {item}</li>
+                                ))}
                             </ul>
                         </div>
                         {/* Development */}
                         <div className="rounded-2xl border-2 border-dashed border-[#ffed5c] bg-transparent p-6 flex flex-col gap-4">
                             <h3 className="text-xl font-bold text-[#ffed5c] [font-family:var(--font-heading)]">
-                                Desarrollo front-end y backend
+                                {serviceCards[2].title}
                             </h3>
                             <ul className="space-y-2 text-lg text-[#c7c7c1]">
-                                <li>• Landing pages, e-commerce</li>
-                                <li>• Desarrollo front-end (React, NextJS, TypeScript y TailwindCSS)</li>
-                                <li>• Desarrollo back-end (bases de datos, integraciones y paneles)</li>
+                                {serviceCards[2].items.map((item) => (
+                                    <li key={item}>• {item}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -322,199 +307,62 @@ const Hero = () => {
         <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-center text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                    Conocé nuestros planes y elegi el ideal para vos
+                    {t("Pricing.title")}
                 </h2>
 
                 <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {/* Plan 1 - NOVA */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
-                        <div>
-                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
-                                Estandar
-                            </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
-                                Plan NOVA
-                            </h3>
+                    {pricingPlans.map((plan) => (
+                        <div key={plan.name} className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
+                            <div>
+                                <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
+                                    {plan.tag}
+                                </p>
+                                <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
+                                    {plan.name}
+                                </h3>
+                            </div>
+
+                            <div>
+                                <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
+                                    {plan.delivery}
+                                </p>
+                            </div>
+
+                            <div>
+                                <p className="text-2xl font-bold text-[#c7c7c1]">
+                                    {plan.price}
+                                </p>
+                                <p className="mt-2 text-sm leading-relaxed text-[#c7c7c1]">
+                                    {plan.description}
+                                </p>
+                            </div>
+
+                            <div>
+                                <p className="text-xs font-semibold uppercase mb-3">
+                                    {t("Pricing.includesLabel")}
+                                </p>
+                                <ul className="space-y-2">
+                                    {plan.featurePrefix && (
+                                        <li className="text-sm text-[#c7c7c1] flex gap-2">
+                                            <span className="text-[#9df74d]">•</span>
+                                            <span>{plan.featurePrefix}</span>
+                                            <span className="text-[#5C81FA]">{plan.featureHighlight}</span>
+                                        </li>
+                                    )}
+                                    {plan.features.map((feature) => (
+                                        <li key={feature} className="text-sm text-[#c7c7c1] flex gap-2">
+                                            <span className="text-[#9df74d]">•</span>
+                                            <span>{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
+                                {t("Pricing.cta")}
+                            </button>
                         </div>
-
-                        <div>
-                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
-                                Entrega Estimado: 2 a 3 Semanas
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-2xl font-bold text-[#c7c7c1]">
-                                Desde USD 400
-                            </p>
-                            <p className="mt-2 text-sm leading-relaxed text-[#c7c7c1]">
-                                Ideal para marcas personales, lanzamientos de empresas o emprendimientos que necesitan una presencia online rápida, moderna y efectiva.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-xs font-semibold uppercase mb-3">
-                                Incluye:
-                            </p>
-                            <ul className="space-y-2">
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Diseño UX/UI completo en FIGMA</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Implementación en Wordpress</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Sitio responsivo</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>3 revisiones</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Configuración completa de hosting, dominio y seguridad SSL</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Solicitar más info
-                        </button>
-                    </div>
-
-                    {/* Plan 2 - ONIX */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
-                        <div>
-                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
-                                Premium
-                            </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
-                                Plan ONIX
-                            </h3>
-                        </div>
-
-                        <div>
-                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
-                                Entrega Estimado: 3 a 4 Semanas
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-2xl font-bold text-[#c7c7c1]">
-                                Desde USD 800
-                            </p>
-                            <p className="mt-2 text-sm leading-relaxed text-[#c7c7c1]">
-                                Ideal para empresas o marcas que buscan presencia online profesional y que necesitan una solución integral.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-xs font-semibold uppercase mb-3">
-                                Incluye:
-                            </p>
-                            <ul className="space-y-2">
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Diseño UX/UI completo en FIGMA</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>UI Kit y manual de diseño</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Desarrollo front-end + back-end básico</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>APIs</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Sitio responsivo</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>5 revisiones pre-lanzamiento</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Configuración completa de hosting, dominio y seguridad SSL</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Soporte post-lanzamiento</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Solicitar más info
-                        </button>
-                    </div>
-
-                    {/* Plan 3 - ÓRBITA */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6">
-                        <div>
-                            <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
-                                Personalizado
-                            </p>
-                            <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
-                                Plan ÓRBITA
-                            </h3>
-                        </div>
-
-                        <div>
-                            <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
-                                Entrega Estimado: A Definir
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-2xl font-bold text-[#c7c7c1]">
-                                Precio: a definir según requerimientos del proyecto
-                            </p>
-                            <p className="mt-2 text-sm leading-relaxed text-[#c7c7c1]">
-                                Ideal para empresas o proyectos que necesitan un sitio web 100% personalizado, con funcionalidades específicas, integraciones avanzadas o diseño a medida desde cero.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p className="text-xs font-semibold uppercase mb-3">
-                                Incluye:
-                            </p>
-                            <ul className="space-y-2">
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Incluye todo del</span>
-                                    <span className='text-[#5C81FA]'>PLAN ONIX +</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Reunión estratégica y análisis del proyecto</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Arquitectura UX/UI personalizada</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Desarrollo front-end y back-end a medida</span>
-                                </li>
-                                <li className="text-sm text-[#c7c7c1] flex gap-2">
-                                    <span className="text-[#9df74d]">•</span>
-                                    <span>Revisiones ilimitadas</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
-                            Solicitar más info
-                        </button>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
@@ -523,63 +371,51 @@ const Hero = () => {
         <section id="testimonios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-center text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                    ¿Qué opinan nuestros clientes?
+                    {t("Testimonials.title")}
                 </h2>
 
                 <div className="flex w-full flex-col gap-8">
                     {/* Top row — 2 cards */}
                     <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
-                        {/* Testimonial 1 — Viviana */}
-                        <div className="rounded-3xl border-2 border-dashed border-[#6b7dff] bg-transparent p-8 flex flex-col gap-6">
-                            <div className="flex items-center gap-4">
-                                <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#6b7dff]">
-                                    <Image
-                                        src="/vivi-foto.svg"
-                                        alt="Viviana Urbaneja"
-                                        width={64}
-                                        height={64}
-                                        className="h-full w-full object-cover"
-                                    />
+                        {[
+                            { color: "#6b7dff", image: "/vivi-foto.svg" },
+                            { color: "#ffed5c", image: "/diana-foto.svg" },
+                        ].map((style, index) => {
+                            const testimonial = testimonials[index];
+                            return (
+                                <div
+                                    key={testimonial.name}
+                                    className="rounded-3xl border-2 border-dashed bg-transparent p-8 flex flex-col gap-6"
+                                    style={{ borderColor: style.color }}
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div
+                                            className="h-16 w-16 overflow-hidden rounded-full border-2"
+                                            style={{ borderColor: style.color }}
+                                        >
+                                            <Image
+                                                src={style.image}
+                                                alt={testimonial.name}
+                                                width={64}
+                                                height={64}
+                                                className="h-full w-full object-cover"
+                                            />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-semibold" style={{ color: style.color }}>
+                                                {testimonial.name}
+                                            </h3>
+                                            <p className="text-sm text-[#c7c7c1]">
+                                                {testimonial.role}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
+                                        &quot;{testimonial.quote}&quot;
+                                    </blockquote>
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-[#6b7dff]">
-                                        Viviana Urbaneja
-                                    </h3>
-                                    <p className="text-sm text-[#c7c7c1]">
-                                        Vivaldi Marketing - Co-Founder
-                                    </p>
-                                </div>
-                            </div>
-                            <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
-                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
-                            </blockquote>
-                        </div>
-
-                        {/* Testimonial 2 — Diana */}
-                        <div className="rounded-3xl border-2 border-dashed border-[#ffed5c] bg-transparent p-8 flex flex-col gap-6">
-                            <div className="flex items-center gap-4">
-                                <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#ffed5c]">
-                                    <Image
-                                        src="/diana-foto.svg"
-                                        alt="Diana Pompa Morris"
-                                        width={64}
-                                        height={64}
-                                        className="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-[#ffed5c]">
-                                        Diana Pompa Morris
-                                    </h3>
-                                    <p className="text-sm text-[#c7c7c1]">
-                                        Dictum - Founder &amp; Lead Quality Assurance
-                                    </p>
-                                </div>
-                            </div>
-                            <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
-                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
-                            </blockquote>
-                        </div>
+                            );
+                        })}
                     </div>
 
                     {/* Bottom row — 1 card centered */}
@@ -589,7 +425,7 @@ const Hero = () => {
                                 <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#ff6b6b]">
                                     <Image
                                         src="/jorge-foto.svg"
-                                        alt="Jorge Valderrama"
+                                        alt={testimonials[2].name}
                                         width={64}
                                         height={64}
                                         className="h-full w-full object-cover"
@@ -597,15 +433,15 @@ const Hero = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-[#ff6b6b]">
-                                        Jorge Valderrama
+                                        {testimonials[2].name}
                                     </h3>
                                     <p className="text-sm text-[#c7c7c1]">
-                                        Vivaldi Marketing - Co-Founder
+                                        {testimonials[2].role}
                                     </p>
                                 </div>
                             </div>
                             <blockquote className="text-base leading-relaxed text-[#c7c7c1] italic text-center">
-                                &quot;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor&quot;
+                                &quot;{testimonials[2].quote}&quot;
                             </blockquote>
                         </div>
                     </div>
@@ -618,68 +454,46 @@ const Hero = () => {
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
                     <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                        Portafolio
+                        {t("Portfolio.title")}
                     </h2>
                     <p className="max-w-[800px] text-lg text-[#c7c7c1]">
-                        Creamos sitios web pensados para las personas. En este portfolio mostramos algunos de los proyectos en los que trabajamos, combinando diseño UX/UI, desarrollo y mantenimiento para construir experiencias digitales que funcionan, se ven bien y evolucionan en el tiempo.
+                        {t("Portfolio.description")}
                     </p>
                 </div>
 
                 <div className="flex w-full flex-col gap-6">
-                    {/* Portfolio Item 1 */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        <div className="flex flex-col gap-4">
-                            <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                Vivaldi Marketing
-                            </h3>
-                            <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                Para Vivaldi Marketing nos encargamos del rediseño de su sitio web. El cliente ya contaba con una parte del diseño avanzado, y nuestra tarea fue optimizar lo existente y completar el diseño del resto de las páginas para lograr una experiencia coherente y alineada con la identidad de la marca.
-                            </p>
-                        </div>
-                        <a
-                            href="https://www.vivaldimkt.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0 inline-flex items-center justify-center"
-                        >
-                            Ver proyecto {">"}
-                        </a>
-                    </div>
+                    {portfolioItems.map((item, index) => {
+                        const hrefs = ["https://www.vivaldimkt.com/", "https://www.dictumtranslationsolutions.com/", null];
+                        const href = hrefs[index];
+                        const linkClassName = "w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0 inline-flex items-center justify-center";
 
-                    {/* Portfolio Item 2 */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        <div className="flex flex-col gap-4">
-                            <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                Dictum Translations
-                            </h3>
-                            <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                Para Dictum Translation Solutions llevamos adelante el rediseño completo de su sitio web en español e inglés. El proceso comenzó con el diseño UX/UI en Figma y posteriormente fue implementado en WordPress. El objetivo principal fue modernizar la identidad digital de la marca, logrando un estilo contemporáneo y formal, pero al mismo tiempo dinámico y flexible, evitando una estructura rígida.
-                            </p>
-                        </div>
-                        <a
-                            href="https://www.dictumtranslationsolutions.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0 inline-flex items-center justify-center"
-                        >
-                            Ver proyecto {">"}
-                        </a>
-                    </div>
-
-                    {/* Portfolio Item 3 */}
-                    <div className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        <div className="flex flex-col gap-4">
-                            <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
-                                easyemAll
-                            </h3>
-                            <p className="text-base leading-relaxed text-[#c7c7c1]">
-                                EasyEmail fue un proyecto desarrollado en 5 días dentro de No Country, con el desafío de integrar inteligencia artificial para la generación automatizada de emails orientados a emprendimientos. La plataforma permite crear correos personalizados definiendo temática, tono y asunto según las necesidades del usuario, optimizando tiempos y facilitando la comunicación digital.
-                            </p>
-                        </div>
-                        <button className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0">
-                            Ver proyecto {">"}
-                        </button>
-                    </div>
+                        return (
+                            <div key={item.title} className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                                <div className="flex flex-col gap-4">
+                                    <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-base leading-relaxed text-[#c7c7c1]">
+                                        {item.description}
+                                    </p>
+                                </div>
+                                {href ? (
+                                    <a
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={linkClassName}
+                                    >
+                                        {t("Portfolio.cta")} {">"}
+                                    </a>
+                                ) : (
+                                    <button className="w-full rounded-xl bg-[#efefe8] px-6 py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] md:w-auto md:flex-shrink-0">
+                                        {t("Portfolio.cta")} {">"}
+                                    </button>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
@@ -688,81 +502,28 @@ const Hero = () => {
         <section id="qa" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
-                    Preguntas Frecuentes
+                    {t("Faq.title")}
                 </h2>
 
                 <div className="flex w-full flex-col gap-4">
-                    {/* FAQ Item 1 */}
-                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
-                            <span>¿Cómo es el proceso de trabajo para un nuevo proyecto?</span>
-                            <svg
-                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </summary>
-                        <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-                        </p>
-                    </details>
-
-                    {/* FAQ Item 2 */}
-                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
-                            <span>¿Cuánto tiempo lleva desarrollar una página web?</span>
-                            <svg
-                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </summary>
-                        <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-                        </p>
-                    </details>
-
-                    {/* FAQ Item 3 */}
-                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
-                            <span>¿Mi sitio web será adaptable a dispositivos móviles?</span>
-                            <svg
-                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </summary>
-                        <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-                        </p>
-                    </details>
-
-                    {/* FAQ Item 4 */}
-                    <details className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                        <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
-                            <span>¿Pueden rediseñar o mejorar un sitio web existente?</span>
-                            <svg
-                                className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </summary>
-                        <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-                        </p>
-                    </details>
+                    {faqItems.map((item) => (
+                        <details key={item.question} className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
+                            <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
+                                <span>{item.question}</span>
+                                <svg
+                                    className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                </svg>
+                            </summary>
+                            <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
+                                {item.answer}
+                            </p>
+                        </details>
+                    ))}
                 </div>
             </div>
         </section>
@@ -771,34 +532,34 @@ const Hero = () => {
         <section id="contacto-formulario" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[600px] flex-col items-center gap-12 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
-                    Sigamos en contacto
+                    {t("Contact.title")}
                 </h2>
 
                 <form className="flex w-full flex-col gap-6">
                     {/* Name Input */}
                     <input
                         type="text"
-                        placeholder="Nombre y Apellido"
+                        placeholder={t("Contact.namePlaceholder")}
                         className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Email Input */}
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder={t("Contact.emailPlaceholder")}
                         className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Subject Input */}
                     <input
                         type="text"
-                        placeholder="Asunto"
+                        placeholder={t("Contact.subjectPlaceholder")}
                         className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Message Textarea */}
                     <textarea
-                        placeholder="Mensaje"
+                        placeholder={t("Contact.messagePlaceholder")}
                         rows={8}
                         className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors resize-none focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
@@ -809,7 +570,7 @@ const Hero = () => {
                             type="submit"
                             className="rounded-2xl bg-[#efefe8] px-12 py-4 text-lg font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7]"
                         >
-                            Enviar
+                            {t("Contact.submit")}
                         </button>
                     </div>
                 </form>

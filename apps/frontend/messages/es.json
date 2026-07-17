@@ -1,0 +1,209 @@
+{
+  "Header": {
+    "logoAlt": "Ir al inicio de Orbitadev",
+    "nav": {
+      "about": "Sobre Nosotros",
+      "services": "Servicios",
+      "testimonials": "Testimonios",
+      "portfolio": "Porfolio",
+      "qa": "Q&A",
+      "contact": "Contacto"
+    }
+  },
+  "Hero": {
+    "title": "Tu proyecto digital, en la órbita correcta",
+    "description": "En nextorbita creamos sitios web y productos digitales enfocados en la experiencia de usuario, el rendimiento y el crecimiento de tu negocio. Combinamos diseño UX/UI, desarrollo front-end y back-end para construir soluciones digitales claras, funcionales y escalables.",
+    "ctaContact": "Sigamos en contacto",
+    "ctaMore": "Quiero saber más"
+  },
+  "About": {
+    "title": "¿Quiénes somos?",
+    "paragraphs": [
+      "Somos nextorbita, una agencia de diseño web y desarrollo web enfocada en crear experiencias digitales funcionales, atractivas y pensadas para crecer junto a cada proyecto.",
+      "Trabajamos de forma cercana y colaborativa, involucrándonos en cada etapa del proceso desde la definición de la idea, el diseño de la experiencia de usuario y la interfaz, hasta el desarrollo técnico y el mantenimiento del producto.",
+      "Nuestro enfoque combina diseño UX/UI, desarrollo front-end y desarrollo back-end, priorizando la usabilidad, el rendimiento y la escalabilidad. Creamos sitios web claros, fáciles de mantener y preparados para evolucionar en el tiempo, acompañando al crecimiento digital de cada cliente."
+    ]
+  },
+  "Team": {
+    "title": "¿Quiénes forman parte de nextorbita?",
+    "subtitle": "Equipo especializado en UX/UI, front-end y back-end trabajando de forma colaborativa desde la etapa inicial del proyecto.",
+    "members": [
+      {
+        "name": "Christian Aránguiz",
+        "bio": "Soy desarrollador Full Stack especializado en Frontend, enfocado en la creación de interfaces de usuario modernas, intuitivas y optimizadas. Trabajo principalmente en el desarrollo web con React, Next.js, TypeScript y Tailwind, integrando soluciones con IA y arquitecturas eficientes. Complemento mi perfil con experiencia en Project Management, analítica de datos y automatización de CRMs."
+      },
+      {
+        "name": "Paloma Herrera",
+        "bio": "Ha estudiado la carrera de Analista de Sistemas y cuenta con experiencia previa como desarrolladora, lo que le permite comprender en profundidad el nivel de diseño y tecnología. Actualmente se enfoca en el área de diseño UX/UI, en la cual se ha formado a través de distintos cursos y un Master en UX/UI en Nuclio Digital School. Diseña experiencias claras, funcionales y alineadas a los objetivos del negocio."
+      },
+      {
+        "name": "Martin Valdes",
+        "bio": "Soy desarrollador Full Stack, con especialización en Backend, enfocado en la creación de soluciones robustas, escalables y seguras. Trabajo principalmente en el desarrollo y mantenimiento de arquitecturas del lado del servidor, integrando APIs y lógica de negocio eficiente. Complemento mi perfil como desarrollador con formación en redes de datos y ciberseguridad, tanto en el ámbito defensivo como ofensivo."
+      }
+    ]
+  },
+  "Services": {
+    "title": "¿Qué servicios ofrecemos?",
+    "cards": [
+      {
+        "title": "Diseño UX/UI",
+        "items": [
+          "Research y arquitectura de información",
+          "Diseño de interfaces y prototipado en Figma",
+          "Diseño responsive y creación de UI Kits"
+        ]
+      },
+      {
+        "title": "Mantenimiento de la web",
+        "items": [
+          "Testing final y optimización antes del lanzamiento",
+          "Configuración de entorno de producción",
+          "Deploy en producción y monitoreo post-lanzamiento"
+        ]
+      },
+      {
+        "title": "Desarrollo front-end y backend",
+        "items": [
+          "Landing pages, e-commerce",
+          "Desarrollo front-end (React, NextJS, TypeScript y TailwindCSS)",
+          "Desarrollo back-end (bases de datos, integraciones y paneles)"
+        ]
+      }
+    ]
+  },
+  "Pricing": {
+    "title": "Conocé nuestros planes y elegi el ideal para vos",
+    "includesLabel": "Incluye:",
+    "cta": "Solicitar más info",
+    "plans": [
+      {
+        "tag": "Estandar",
+        "name": "Plan NOVA",
+        "delivery": "Entrega Estimado: 2 a 3 Semanas",
+        "price": "Desde USD 400",
+        "description": "Ideal para marcas personales, lanzamientos de empresas o emprendimientos que necesitan una presencia online rápida, moderna y efectiva.",
+        "features": [
+          "Diseño UX/UI completo en FIGMA",
+          "Implementación en Wordpress",
+          "Sitio responsivo",
+          "3 revisiones",
+          "Configuración completa de hosting, dominio y seguridad SSL"
+        ]
+      },
+      {
+        "tag": "Premium",
+        "name": "Plan ONIX",
+        "delivery": "Entrega Estimado: 3 a 4 Semanas",
+        "price": "Desde USD 800",
+        "description": "Ideal para empresas o marcas que buscan presencia online profesional y que necesitan una solución integral.",
+        "features": [
+          "Diseño UX/UI completo en FIGMA",
+          "UI Kit y manual de diseño",
+          "Desarrollo front-end + back-end básico",
+          "APIs",
+          "Sitio responsivo",
+          "5 revisiones pre-lanzamiento",
+          "Configuración completa de hosting, dominio y seguridad SSL",
+          "Soporte post-lanzamiento"
+        ]
+      },
+      {
+        "tag": "Personalizado",
+        "name": "Plan ÓRBITA",
+        "delivery": "Entrega Estimado: A Definir",
+        "price": "Precio: a definir según requerimientos del proyecto",
+        "description": "Ideal para empresas o proyectos que necesitan un sitio web 100% personalizado, con funcionalidades específicas, integraciones avanzadas o diseño a medida desde cero.",
+        "featurePrefix": "Incluye todo del",
+        "featureHighlight": "PLAN ONIX +",
+        "features": [
+          "Reunión estratégica y análisis del proyecto",
+          "Arquitectura UX/UI personalizada",
+          "Desarrollo front-end y back-end a medida",
+          "Revisiones ilimitadas"
+        ]
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "¿Qué opinan nuestros clientes?",
+    "items": [
+      {
+        "name": "Viviana Urbaneja",
+        "role": "Vivaldi Marketing - Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      },
+      {
+        "name": "Diana Pompa Morris",
+        "role": "Dictum - Founder & Lead Quality Assurance",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      },
+      {
+        "name": "Jorge Valderrama",
+        "role": "Vivaldi Marketing - Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor"
+      }
+    ]
+  },
+  "Portfolio": {
+    "title": "Portafolio",
+    "description": "Creamos sitios web pensados para las personas. En este portfolio mostramos algunos de los proyectos en los que trabajamos, combinando diseño UX/UI, desarrollo y mantenimiento para construir experiencias digitales que funcionan, se ven bien y evolucionan en el tiempo.",
+    "cta": "Ver proyecto",
+    "items": [
+      {
+        "title": "Vivaldi Marketing",
+        "description": "Para Vivaldi Marketing nos encargamos del rediseño de su sitio web. El cliente ya contaba con una parte del diseño avanzado, y nuestra tarea fue optimizar lo existente y completar el diseño del resto de las páginas para lograr una experiencia coherente y alineada con la identidad de la marca."
+      },
+      {
+        "title": "Dictum Translations",
+        "description": "Para Dictum Translation Solutions llevamos adelante el rediseño completo de su sitio web en español e inglés. El proceso comenzó con el diseño UX/UI en Figma y posteriormente fue implementado en WordPress. El objetivo principal fue modernizar la identidad digital de la marca, logrando un estilo contemporáneo y formal, pero al mismo tiempo dinámico y flexible, evitando una estructura rígida."
+      },
+      {
+        "title": "easyemAll",
+        "description": "EasyEmail fue un proyecto desarrollado en 5 días dentro de No Country, con el desafío de integrar inteligencia artificial para la generación automatizada de emails orientados a emprendimientos. La plataforma permite crear correos personalizados definiendo temática, tono y asunto según las necesidades del usuario, optimizando tiempos y facilitando la comunicación digital."
+      }
+    ]
+  },
+  "Faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Cómo es el proceso de trabajo para un nuevo proyecto?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "¿Cuánto tiempo lleva desarrollar una página web?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "¿Mi sitio web será adaptable a dispositivos móviles?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      {
+        "question": "¿Pueden rediseñar o mejorar un sitio web existente?",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Sigamos en contacto",
+    "namePlaceholder": "Nombre y Apellido",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Asunto",
+    "messagePlaceholder": "Mensaje",
+    "submit": "Enviar"
+  },
+  "Footer": {
+    "logoAlt": "Ir al inicio de Orbitadev",
+    "description": "En nextorbita creamos sitios web y productos digitales enfocados en la experiencia de usuario, el rendimiento y el crecimiento de tu negocio. Combinamos diseño UX/UI, desarrollo front-end y back-end para construir soluciones digitales claras, funcionales y escalables.",
+    "menuTitle": "Menu",
+    "menuItems": ["Sobre Nosotros", "Equipo", "Servicios", "Testimonios", "Q&A"],
+    "portfolioTitle": "Porfolio",
+    "portfolioItems": ["Vivaldi Marketing", "Dictum Translations", "easyemAll"],
+    "contactTitle": "Contacto",
+    "email": "nextorbita@gmail.com",
+    "copyright": "© 2026 - by"
+  },
+  "LanguageToggle": {
+    "ariaLabel": "Cambiar idioma"
+  }
+}

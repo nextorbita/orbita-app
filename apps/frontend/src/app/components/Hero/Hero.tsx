@@ -162,7 +162,7 @@ const Hero = () => {
                         <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
                             <Image
                                 src="/foto-chris.png"
-                                alt="Paloma Herrera"
+                                alt="Christian Aranguiz"
                                 width={200}
                                 height={200}
                                 className="h-full w-full object-cover"
@@ -174,7 +174,7 @@ const Hero = () => {
                             </h3>
                         </div>
                         <p className="text-center text-sm leading-relaxed text-[#deded7]">
-                            Ha estudiado la carrera de Analista de Sistemas y cuenta con experiencia previa como desarrolladora, lo que le permite comprender en profundidad el nivel de diseño y tecnología. Actualmente se enfoca en el área de diseño UX/UI, en la cual se ha formado a través de distintos cursos y un Master en UX/UI en Nuclio Digital School. Diseña experiencias claras, funcionales y alineadas a los objetivos del negocio.
+                            Soy desarrollador Full Stack especializado en Frontend, enfocado en la creación de interfaces de usuario modernas, intuitivas y optimizadas. Trabajo principalmente en el desarrollo web con React, Next.js, TypeScript y Tailwind, integrando soluciones con IA y arquitecturas eficientes. Complemento mi perfil con experiencia en Project Management, analítica de datos y automatización de CRMs.  
                         </p>
                     </div>
 
@@ -202,9 +202,13 @@ const Hero = () => {
                     {/* Team Member 3 */}
                     <div className="flex flex-col items-center gap-6">
                         <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
-                            <div className="h-full w-full flex items-center justify-center bg-[#3a3a3a] text-xl font-bold text-[#9df74d]">
-                                MV
-                            </div>
+                     <Image
+                                src="/foto_martin.jpeg"
+                                alt="Martin Valdes"
+                                width={200}
+                                height={200}
+                                className="h-70 w-full object-cover"
+                            />
                         </div>
                         <div className="flex flex-col items-center gap-2">
                             <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">

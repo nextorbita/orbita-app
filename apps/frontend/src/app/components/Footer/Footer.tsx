@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Right side */}
-          <div className="flex grid-cols-3 gap-16">
+          <div className="flex flex-col gap-10 sm:flex-row sm:flex-wrap sm:gap-10 lg:gap-16">
             {/* Menu Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">

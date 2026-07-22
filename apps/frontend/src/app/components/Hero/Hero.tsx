@@ -38,11 +38,13 @@ const Hero = () => {
     return (
         <>
         <Header />
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] min-h-screen">
+          {/* Hero Section */}
+        <section className="relative isolate overflow-hidden bg-[#282828] bg-[url(/fondo_hero.png)] bg-contain bg-center bg-no-repeat text-[#f0f0ec] min-h-screen">
+        
             <div className="pointer-events-none absolute inset-0 -z-10">
-                <div className="absolute left-[-12rem] top-[-16rem] h-[28rem] w-[28rem] rounded-full bg-lime-400/10 blur-3xl" />
+                {/* <div className="absolute left-[-12rem] top-[-16rem] h-[28rem] w-[28rem] rounded-full bg-lime-400/10 blur-3xl" /> */}
                 {/* <div className="absolute right-[-10rem] bottom-[-14rem] h-[24rem] w-[24rem] rounded-full bg-neutral-100/10 blur-3xl" /> */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(157,247,77,0.1),transparent_40%))]" />
+                {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(157,247,77,0.1),transparent_40%))]" /> */}
             </div>
 
             <div className="mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-6 pb-12 pt-24 md:px-10 md:pt-28 lg:px-16 lg:pt-32">

@@ -21,7 +21,7 @@ const LanguageToggle = () => {
             type="button"
             onClick={handleToggle}
             aria-label={t("ariaLabel")}
-            className="flex items-center gap-1 rounded-full border border-[#bcbcb5] px-4 py-2 text-sm font-semibold text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300"
+            className="flex items-center gap-1 rounded-full border border-[#bcbcb5] px-4 py-2 text-sm font-semibold text-[#f2f2ee] transition-colors duration-200 hover:text-lime-300"
         >     
              <span className={locale === "en" ? "text-lime-300" : ""}>EN</span>
              <span aria-hidden="true">/</span>

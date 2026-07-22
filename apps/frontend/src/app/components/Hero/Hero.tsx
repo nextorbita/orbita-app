@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Header from "../Header/Header";
 
@@ -30,9 +31,13 @@ const Hero = () => {
     const portfolioItems = t.raw("Portfolio.items") as PortfolioItem[];
     const faqItems = t.raw("Faq.items") as FaqItem[];
     const aboutParagraphs = t.raw("About.paragraphs") as string[];
+    const [openFaq, setOpenFaq] = useState<Record<string, boolean>>({});
+    const toggleFaq = (question: string) =>
+        setOpenFaq((prev) => ({ ...prev, [question]: !prev[question] }));
 
     return (
         <>
+        <Header />
         <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] min-h-screen">
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <div className="absolute left-[-12rem] top-[-16rem] h-[28rem] w-[28rem] rounded-full bg-lime-400/10 blur-3xl" />
@@ -40,9 +45,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(157,247,77,0.1),transparent_40%))]" />
             </div>
 
-            <div className="mx-auto flex min-h-screen w-full max-w-[1180px] flex-col px-6 pb-12 pt-7 md:px-10 lg:px-16 lg:pt-10">
-                <Header />
-
+            <div className="mx-auto flex min-h-screen w-full max-w-[1180px] flex-col px-6 pb-12 pt-24 md:px-10 md:pt-28 lg:px-16 lg:pt-32">
                 <div className="mx-auto flex w-full max-w-[900px] grow flex-col items-center justify-center pt-16 text-center md:pt-20">
                     <h1 className="max-w-[13ch] text-balance text-4xl font-semibold leading-[1.25] text-[#9df74d] [font-family:var(--font-heading)] sm:text-5xl lg:text-[68px] lg:leading-[1.16]">
                         {t("Hero.title")}
@@ -60,7 +63,7 @@ const Hero = () => {
                             {t("Hero.ctaContact")}
                         </a>
                         <a
-                            href="#"
+                            href="#servicios"
                             className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-transparent px-8 text-lg font-medium text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
                         >
                             {t("Hero.ctaMore")}
@@ -92,7 +95,7 @@ const Hero = () => {
         </section>
 
         {/* About Us Section */}
-        <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+        <section id="quienes-somos" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
                 <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     {t("About.title")}
@@ -184,7 +187,7 @@ const Hero = () => {
 
                         return (
                             <div key={member.name} className="flex flex-col items-center gap-6">
-                                <div className="h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-[#9df74d] bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
+                                <div className="h-[200px] w-[200px] overflow-hidden rounded-full bg-gradient-to-br from-[#9df74d] to-[#6b9944]">
                                     <Image
                                         src={image.src}
                                         alt={member.name}
@@ -217,7 +220,7 @@ const Hero = () => {
 
                 <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center">
                     {/* Left Card - Diseño UX/UI */}
-                    <div className="w-full rounded-2xl border-2 border-dashed border-[#ff6b6b] bg-transparent p-6 flex flex-col gap-4 lg:max-w-[260px] lg:flex-shrink-0">
+                    <div className="w-full rounded-2xl border-1 border-dashed border-[#ff6b6b] bg-transparent p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-solid hover:shadow-[0_0_25px_-5px_rgba(255,107,107,0.6)] lg:max-w-[260px] lg:flex-shrink-0">
                         <h3 className="text-xl font-bold text-[#ff6b6b] [font-family:var(--font-heading)]">
                             {serviceCards[0].title}
                         </h3>
@@ -277,7 +280,7 @@ const Hero = () => {
                     {/* Right Cards */}
                     <div className="flex w-full flex-col gap-6 lg:max-w-[260px] lg:flex-shrink-0">
                         {/* Maintenance */}
-                        <div className="rounded-2xl border-2 border-dashed border-[#6b7dff] bg-transparent p-6 flex flex-col gap-4">
+                        <div className="rounded-2xl border-1 border-dashed border-[#6b7dff] bg-transparent p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-solid hover:shadow-[0_0_25px_-5px_rgba(107,125,255,0.6)]">
                             <h3 className="text-xl font-bold text-[#6b7dff] [font-family:var(--font-heading)]">
                                 {serviceCards[1].title}
                             </h3>
@@ -288,7 +291,7 @@ const Hero = () => {
                             </ul>
                         </div>
                         {/* Development */}
-                        <div className="rounded-2xl border-2 border-dashed border-[#ffed5c] bg-transparent p-6 flex flex-col gap-4">
+                        <div className="rounded-2xl border-1 border-dashed border-[#ffed5c] bg-transparent p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-solid hover:shadow-[0_0_25px_-5px_rgba(255,237,92,0.6)]">
                             <h3 className="text-xl font-bold text-[#ffed5c] [font-family:var(--font-heading)]">
                                 {serviceCards[2].title}
                             </h3>
@@ -506,24 +509,45 @@ const Hero = () => {
                 </h2>
 
                 <div className="flex w-full flex-col gap-4">
-                    {faqItems.map((item) => (
-                        <details key={item.question} className="group rounded-3xl border-2 border-[#FEFDEC] p-6 cursor-pointer">
-                            <summary className="flex items-center justify-between text-lg font-medium text-[#c7c7c1] hover:text-[#9df74d] group-open:text-[#9df74d] transition-colors duration-200">
-                                <span>{item.question}</span>
-                                <svg
-                                    className="h-6 w-6 text-[#FEFDEC] group-open:text-[#9df74d] transition-transform group-open:rotate-180"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
+                    {faqItems.map((item) => {
+                        const isOpen = !!openFaq[item.question];
+                        return (
+                            <div key={item.question} className="rounded-xl border-2 border-[#FEFDEC] p-6">
+                                <button
+                                    type="button"
+                                    onClick={() => toggleFaq(item.question)}
+                                    aria-expanded={isOpen}
+                                    className={`flex w-full cursor-pointer items-center justify-between gap-4 text-left text-lg font-medium transition-colors duration-200 hover:text-[#9df74d] ${isOpen ? "text-[#9df74d]" : "text-[#c7c7c1]"}`}
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                </svg>
-                            </summary>
-                            <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
-                                {item.answer}
-                            </p>
-                        </details>
-                    ))}
+                                    <span>{item.question}</span>
+                                    <svg
+                                        className={`h-6 w-6 shrink-0 text-[#9df74d] transition-transform duration-300 ease-out ${isOpen ? "" : "rotate-180"}`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                    </svg>
+                                </button>
+                                <AnimatePresence initial={false}>
+                                    {isOpen && (
+                                        <motion.div
+                                            key="content"
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: "easeOut" }}
+                                            className="overflow-hidden"
+                                        >
+                                            <p className="mt-4 text-base leading-relaxed text-[#c7c7c1]">
+                                                {item.answer}
+                                            </p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
@@ -540,28 +564,28 @@ const Hero = () => {
                     <input
                         type="text"
                         placeholder={t("Contact.namePlaceholder")}
-                        className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
+                        className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Email Input */}
                     <input
                         type="email"
                         placeholder={t("Contact.emailPlaceholder")}
-                        className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
+                        className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Subject Input */}
                     <input
                         type="text"
                         placeholder={t("Contact.subjectPlaceholder")}
-                        className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
+                        className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Message Textarea */}
                     <textarea
                         placeholder={t("Contact.messagePlaceholder")}
                         rows={8}
-                        className="w-full rounded-2xl border-2 border-[#9df74d] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors resize-none focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
+                        className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors resize-none focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
                     />
 
                     {/* Submit Button */}

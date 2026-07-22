@@ -1,6 +1,8 @@
 {
   "Header": {
     "logoAlt": "Go to Orbitadev home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "nav": {
       "about": "About Us",
       "services": "Services",

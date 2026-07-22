@@ -58,13 +58,13 @@ const Hero = () => {
 
             <div className="mt-12 flex w-full max-w-[560px] flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
               <a
-                href="#servicios"
+                href="#services"
                 className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#9df74d] px-8 text-lg font-medium text-[#2b2b2a] transition-transform duration-200 hover:-translate-y-0.5 sm:w-[260px] hover:border-[#FEFDEC] hover:text-[#FEFDEC]"
               >
                 {t("Hero.ctaMore")}
               </a>
               <a
-                href="#contacto-formulario"
+                href="#contact-form"
                 className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-[#FEFDEC] px-8 text-lg font-medium text-[#2b2b2a] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 hover:-translate-y-0.5 sm:w-[260px]"
               >
                 {t("Hero.ctaContact")}
@@ -209,7 +209,7 @@ const Hero = () => {
 
       {/* Team Section */}
       <section
-        id="sobre-nosotros"
+        id="about-us"
         className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32"
       >
         <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
@@ -271,7 +271,7 @@ const Hero = () => {
 
       {/* Services Section */}
       <section
-        id="servicios"
+        id="services"
         className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32"
       >
         <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
@@ -512,7 +512,7 @@ const Hero = () => {
 
       {/* Testimonials Section */}
       <section
-        id="testimonios"
+        id="testimonials"
         className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32"
       >
         <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
@@ -722,7 +722,7 @@ const Hero = () => {
 
       {/* Contact Section */}
       <section
-        id="contacto-formulario"
+        id="contact-form"
         className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32"
       >
         <div className="mx-auto flex w-full max-w-[600px] flex-col items-center gap-12 px-6 md:px-10 lg:px-16">

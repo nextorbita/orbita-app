@@ -7,12 +7,12 @@ import { useTranslations } from "next-intl";
 import LanguageToggle from "../LanguageToggle/LanguageToggle";
 
 const navHrefs = [
-    "#sobre-nosotros",
-    "#servicios",
-    "#testimonios",
+    "#about-us",
+    "#services",
+    "#testimonials",
     "#porfolio",
     "#qa",
-    "#contacto-formulario",
+    "#contact-form",
 ] as const;
 
 const navKeys = ["about", "services", "testimonials", "portfolio", "qa", "contact"] as const;

@@ -45,9 +45,9 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(157,247,77,0.1),transparent_40%))]" />
             </div>
 
-            <div className="mx-auto flex min-h-screen w-full max-w-[1180px] flex-col px-6 pb-12 pt-24 md:px-10 md:pt-28 lg:px-16 lg:pt-32">
-                <div className="mx-auto flex w-full max-w-[900px] grow flex-col items-center justify-center pt-16 text-center md:pt-20">
-                    <h1 className="max-w-[13ch] text-balance text-4xl font-semibold leading-[1.25] text-[#9df74d] [font-family:var(--font-heading)] sm:text-5xl lg:text-[68px] lg:leading-[1.16]">
+            <div className="mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-6 pb-12 pt-24 md:px-10 md:pt-28 lg:px-16 lg:pt-32">
+                <div className="mx-auto flex w-full max-w-[1200px] grow flex-col items-center justify-center pt-16 text-center md:pt-20">
+                    <h1 className="max-w-[30ch] text-balance text-4xl font-medium leading-[1.25] text-[#9df74d] [font-family:var(--font-heading)] sm:text-5xl lg:text-[50px] lg:leading-[1.16]">
                         {t("Hero.title")}
                     </h1>
 
@@ -57,16 +57,16 @@ const Hero = () => {
 
                     <div className="mt-12 flex w-full max-w-[560px] flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
                         <a
-                            href="#contacto-formulario"
-                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#efefe8] px-8 text-lg font-semibold text-[#2b2b2a] transition-transform duration-200 hover:-translate-y-0.5 sm:w-[260px]"
-                        >
-                            {t("Hero.ctaContact")}
-                        </a>
-                        <a
                             href="#servicios"
-                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-transparent px-8 text-lg font-medium text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
+                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#9df74d] px-8 text-lg font-medium text-[#2b2b2a] transition-transform duration-200 hover:-translate-y-0.5 sm:w-[260px]"
                         >
                             {t("Hero.ctaMore")}
+                        </a>
+                        <a
+                            href="#contacto-formulario"
+                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-transparent px-8 text-lg font-medium text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
+                        >
+                            {t("Hero.ctaContact")}
                         </a>
                     </div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
         {/* About Us Section */}
         <section id="quienes-somos" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
-                <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     {t("About.title")}
                 </h2>
 
@@ -168,7 +168,7 @@ const Hero = () => {
         <section id="sobre-nosotros" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
-                    <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                    <h2 className="text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                         {t("Team.title")}
                     </h2>
                     <p className="max-w-[700px] text-lg text-[#deded7]">
@@ -197,7 +197,7 @@ const Hero = () => {
                                     />
                                 </div>
                                 <div className="flex flex-col items-center gap-2">
-                                    <h3 className="text-center text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                                    <h3 className="text-center text-2xl font-medium text-[#9df74d] [font-family:var(--font-heading)]">
                                         {member.name}
                                     </h3>
                                 </div>
@@ -214,7 +214,7 @@ const Hero = () => {
         {/* Services Section */}
         <section id="servicios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
-                <h2 className="text-4xl font-bold leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-4xl font-medium leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
                     {t("Services.title")}
                 </h2>
 
@@ -309,7 +309,7 @@ const Hero = () => {
         {/* Pricing Plans Section */}
         <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
-                <h2 className="text-center text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-center text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     {t("Pricing.title")}
                 </h2>
 
@@ -332,10 +332,10 @@ const Hero = () => {
                             </div>
 
                             <div>
-                                <p className="text-2xl font-bold text-[#c7c7c1]">
+                                <p className="text-2xl font-bold text-[#FEFDEC]">
                                     {plan.price}
                                 </p>
-                                <p className="mt-2 text-sm leading-relaxed text-[#c7c7c1]">
+                                <p className="mt-2 text-sm leading-relaxed text-[#FEFDEC]">
                                     {plan.description}
                                 </p>
                             </div>
@@ -346,14 +346,14 @@ const Hero = () => {
                                 </p>
                                 <ul className="space-y-2">
                                     {plan.featurePrefix && (
-                                        <li className="text-sm text-[#c7c7c1] flex gap-2">
+                                        <li className="text-sm text-[#FEFDEC] flex gap-2">
                                             <span className="text-[#9df74d]">•</span>
                                             <span>{plan.featurePrefix}</span>
                                             <span className="text-[#5C81FA]">{plan.featureHighlight}</span>
                                         </li>
                                     )}
                                     {plan.features.map((feature) => (
-                                        <li key={feature} className="text-sm text-[#c7c7c1] flex gap-2">
+                                        <li key={feature} className="text-sm text-[#FEFDEC] flex gap-2">
                                             <span className="text-[#9df74d]">•</span>
                                             <span>{feature}</span>
                                         </li>
@@ -373,7 +373,7 @@ const Hero = () => {
         {/* Testimonials Section */}
         <section id="testimonios" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
-                <h2 className="text-center text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-center text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     {t("Testimonials.title")}
                 </h2>
 
@@ -456,10 +456,10 @@ const Hero = () => {
         <section id="porfolio" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
                 <div className="flex w-full flex-col items-center gap-6 text-center">
-                    <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                    <h2 className="text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                         {t("Portfolio.title")}
                     </h2>
-                    <p className="max-w-[800px] text-lg text-[#c7c7c1]">
+                    <p className="max-w-[900px] text-lg text-[#c7c7c1]">
                         {t("Portfolio.description")}
                     </p>
                 </div>
@@ -473,7 +473,7 @@ const Hero = () => {
                         return (
                             <div key={item.title} className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                                 <div className="flex flex-col gap-4">
-                                    <h3 className="text-2xl font-bold text-[#9df74d] [font-family:var(--font-heading)]">
+                                    <h3 className="text-2xl font-semibold text-[#9df74d] [font-family:var(--font-heading)]">
                                         {item.title}
                                     </h3>
                                     <p className="text-base leading-relaxed text-[#c7c7c1]">
@@ -504,7 +504,7 @@ const Hero = () => {
         {/* FAQ Section */}
         <section id="qa" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
-                <h2 className="text-4xl font-bold leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
                     {t("Faq.title")}
                 </h2>
 
@@ -555,7 +555,7 @@ const Hero = () => {
         {/* Contact Section */}
         <section id="contacto-formulario" className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
             <div className="mx-auto flex w-full max-w-[600px] flex-col items-center gap-12 px-6 md:px-10 lg:px-16">
-                <h2 className="text-4xl font-bold leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
+                <h2 className="text-4xl font-medium leading-tight text-[#9df74d] text-center [font-family:var(--font-heading)] lg:text-5xl">
                     {t("Contact.title")}
                 </h2>
 

@@ -64,7 +64,7 @@ const Hero = () => {
                         </a>
                         <a
                             href="#contacto-formulario"
-                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-transparent px-8 text-lg font-medium text-[#f2f2ee] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
+                            className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-[#FEFDEC] px-8 text-lg font-medium text-[#2b2b2a] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 sm:w-[260px]"
                         >
                             {t("Hero.ctaContact")}
                         </a>

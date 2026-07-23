@@ -320,7 +320,7 @@ const Hero = () => {
             <div className="flex flex-1 items-center justify-center">
               <svg
                 viewBox="0 0 400 400"
-                className="h-[364px] w-[364px] md:h-[494px] md:w-[494px]"
+                className="h-auto w-full max-w-[364px] md:max-w-[494px]"
               >
                 {/* Dashed concentric circles */}
                 <circle

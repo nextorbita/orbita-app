@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Right side */}
-          <div className="flex grid-cols-3 gap-16">
+          <div className="grid grid-cols-3 gap-4 md:gap-16">
             {/* Menu Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
@@ -131,7 +131,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="mailto:orbitadevmail@gmail.com"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a]"
+                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a] break-all"
                   >
                     {t("email")}
                   </a>

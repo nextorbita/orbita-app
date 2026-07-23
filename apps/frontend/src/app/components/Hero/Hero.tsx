@@ -35,6 +35,30 @@ const Hero = () => {
   const toggleFaq = (question: string) =>
     setOpenFaq((prev) => ({ ...prev, [question]: !prev[question] }));
 
+  const [formData, setFormData] = useState({ name: "", email: "", asunto: "", content: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("Error en el envío");
+      setFormStatus("success");
+      setFormData({ name: "", email: "", asunto: "", content: "" });
+    } catch {
+      setFormStatus("error");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -730,42 +754,67 @@ const Hero = () => {
             {t("Contact.title")}
           </h2>
 
-          <form className="flex w-full flex-col gap-6">
+          <form onSubmit={handleFormSubmit} className="flex w-full flex-col gap-6">
             {/* Name Input */}
             <input
               type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleFormChange}
               placeholder={t("Contact.namePlaceholder")}
+              required
               className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
             />
 
             {/* Email Input */}
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleFormChange}
               placeholder={t("Contact.emailPlaceholder")}
+              required
               className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
             />
 
             {/* Subject Input */}
             <input
               type="text"
+              name="asunto"
+              value={formData.asunto}
+              onChange={handleFormChange}
               placeholder={t("Contact.subjectPlaceholder")}
+              required
               className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
             />
 
             {/* Message Textarea */}
             <textarea
+              name="content"
+              value={formData.content}
+              onChange={handleFormChange}
               placeholder={t("Contact.messagePlaceholder")}
               rows={8}
+              required
               className="w-full rounded-2xl border-2 border-[#f0f0ec] bg-transparent px-6 py-4 text-white placeholder-white placeholder-opacity-50 transition-colors resize-none focus:outline-none focus:ring-2 focus:ring-[#9df74d]/30"
             />
+
+            {/* Feedback messages */}
+            {formStatus === "success" && (
+              <p className="text-center text-[#9df74d] font-medium">{t("Contact.successMessage")}</p>
+            )}
+            {formStatus === "error" && (
+              <p className="text-center text-[#ff6b6b] font-medium">{t("Contact.errorMessage")}</p>
+            )}
 
             {/* Submit Button */}
             <div className="flex justify-center pt-4">
               <button
                 type="submit"
-                className="rounded-2xl bg-[#efefe8] px-12 py-4 text-lg font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7]"
+                disabled={formStatus === "loading"}
+                className="rounded-2xl bg-[#efefe8] px-12 py-4 text-lg font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#deded7] disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {t("Contact.submit")}
+                {formStatus === "loading" ? "..." : t("Contact.submit")}
               </button>
             </div>
           </form>

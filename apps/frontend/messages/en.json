@@ -192,7 +192,9 @@
     "emailPlaceholder": "Email",
     "subjectPlaceholder": "Subject",
     "messagePlaceholder": "Message",
-    "submit": "Send"
+    "submit": "Send",
+    "successMessage": "Message sent successfully! We'll get back to you soon.",
+    "errorMessage": "Something went wrong. Please try again."
   },
   "Footer": {
     "logoAlt": "Go to Orbitadev home",

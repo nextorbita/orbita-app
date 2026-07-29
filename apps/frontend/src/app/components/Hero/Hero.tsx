@@ -548,8 +548,8 @@ const Hero = () => {
             {/* Top row — 2 cards */}
             <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
               {[
-                { color: "#6b7dff", image: "/vivi-foto.svg" },
-                { color: "#ffed5c", image: "/diana-foto.svg" },
+                { color: "#6b7dff", image: "/foto_Viviana.png" },
+                { color: "#ffed5c", image: "/foto_Diana.png" },
               ].map((style, index) => {
                 const testimonial = testimonials[index];
                 return (
@@ -597,7 +597,7 @@ const Hero = () => {
                 <div className="flex items-center gap-4">
                   <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-[#ff6b6b]">
                     <Image
-                      src="/jorge-foto.svg"
+                      src="/Foto_Jorge.png"
                       alt={testimonials[2].name}
                       width={64}
                       height={64}

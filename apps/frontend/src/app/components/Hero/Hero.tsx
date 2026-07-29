@@ -83,13 +83,13 @@ const Hero = () => {
             <div className="mt-12 flex w-full max-w-[560px] flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
               <a
                 href="#services"
-                className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#9df74d] px-8 text-lg font-medium text-[#2b2b2a] transition-transform duration-200 hover:-translate-y-0.5 sm:w-[260px] hover:border-[#FEFDEC] hover:text-[#FEFDEC]"
+                className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#9df74d] px-8 text-lg font-medium text-[#2b2b2a] transition-transform duration-400 hover:-translate-y-0.5 sm:w-[260px] hover:border-[#FEFDEC] hover:text-[#FEFDEC] hover:bg-blue-400"
               >
                 {t("Hero.ctaMore")}
               </a>
               <a
                 href="#contact-form"
-                className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl border border-[#bcbcb5] bg-[#FEFDEC] px-8 text-lg font-medium text-[#2b2b2a] transition-colors duration-200 hover:border-lime-300 hover:text-lime-300 hover:-translate-y-0.5 sm:w-[260px]"
+                className="inline-flex min-h-[64px] w-full items-center justify-center rounded-2xl bg-[#FEFDEC] px-8 text-lg font-medium text-[#2b2b2a] transition-colors duration-400 hover:text-[#FEFDEC] hover:-translate-y-0.5 hover:bg-blue-400 sm:w-[260px]"
               >
                 {t("Hero.ctaContact")}
               </a>

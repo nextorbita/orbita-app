@@ -20,9 +20,9 @@ const Footer = () => {
     <footer className="bg-[#f5f5f0] text-[#1a1a1a] py-16 md:py-20">
       <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-6 md:px-10 lg:px-16">
         {/* Top Section */}
-        <div className="grid w-full grid-cols-1 gap-18 md:grid-cols-2 ">
+        <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
           {/* Left side - Logo and Description*/}
-          <div className="flex flex-col gap-6 md:col-span-1 w-3/4">
+          <div className="flex w-full flex-col gap-6 md:col-span-1 md:w-full md:max-w-[420px]">
             <a
               href="#"
               aria-label={t("logoAlt")}
@@ -41,7 +41,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/nextorbita"
                 className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#1a1a1a] text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
                 aria-label="LinkedIn"
               >
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Right side */}
-          <div className="grid grid-cols-3 gap-4 md:gap-16">
+          <div className="grid w-full max-w-full grid-cols-1 gap-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] sm:gap-4 md:gap-8 lg:gap-2">
             {/* Menu Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
@@ -123,15 +123,15 @@ const Footer = () => {
             </div>
 
             {/* Contact Column */}
-            <div className="flex flex-col gap-4">
+            <div className="flex w-full min-w-0 flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#1a1a1a]">
                 {t("contactTitle")}
               </h3>
               <ul className="flex flex-col gap-3">
-                <li>
+                <li className="min-w-0">
                   <a
                     href="mailto:orbitadevmail@gmail.com"
-                    className="text-sm text-[#4a4a4a] transition-colors hover:text-[#1a1a1a] break-all"
+                    className="block w-full min-w-0 overflow-wrap-anywhere break-all text-sm leading-relaxed text-[#4a4a4a] transition-colors hover:text-[#1a1a1a] [word-break:break-word]"
                   >
                     {t("email")}
                   </a>

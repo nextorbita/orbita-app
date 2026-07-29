@@ -170,19 +170,23 @@
     "items": [
       {
         "question": "¿Cómo es el proceso de trabajo para un nuevo proyecto?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Analizamos tu proyecto, diseñamos y desarrollamos el sitio, realizamos las revisiones necesarias y lo publicamos una vez aprobado."
       },
       {
         "question": "¿Cuánto tiempo lleva desarrollar una página web?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Cada proyecto es diferente, pero trabajamos para entregar tu sitio web en el menor tiempo posible sin comprometer la calidad."
       },
       {
         "question": "¿Mi sitio web será adaptable a dispositivos móviles?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Sí, diseñamos todos nuestros sitios para que se vean y funcionen correctamente en cualquier dispositivo."
+      },
+      {
+        "question": "¿Trabajan con WordPress?",
+        "answer": "Sí, podemos rediseñar y optimizar tu sitio web para mejorar su diseño, rendimiento y experiencia de usuario."
       },
       {
         "question": "¿Pueden rediseñar o mejorar un sitio web existente?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Sí, desarrollamos sitios web en WordPress, personalizados, fáciles de administrar y adaptados a las necesidades de cada proyecto."
       }
     ]
   },

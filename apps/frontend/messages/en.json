@@ -170,19 +170,23 @@
     "items": [
       {
         "question": "What is the work process for a new project?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "We analyze your project, design and develop the website, carry out the necessary revisions, and publish it once it is approved."
       },
       {
         "question": "How long does it take to develop a website?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Each project is different, but we work to deliver your website as quickly as possible without compromising quality."
       },
       {
-        "question": "Will my website be mobile-friendly?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "question": "Will my website be adaptable to mobile devices?",
+        "answer": "Yes, we design all our sites to look and work correctly on any device."
+      },
+      {
+        "question": "Do you work with WordPress?",
+        "answer": "Yes, we can redesign and optimize your website to improve its design, performance, and user experience."
       },
       {
         "question": "Can you redesign or improve an existing website?",
-        "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "answer": "Yes, we develop WordPress websites that are customized, easy to manage, and adapted to the needs of each project."
       }
     ]
   },

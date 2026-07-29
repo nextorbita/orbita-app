@@ -473,40 +473,40 @@ const Hero = () => {
             {pricingPlans.map((plan) => (
               <div
                 key={plan.name}
-                className="rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6"
+                className="group rounded-3xl border-2 border-[#FEFDEC] bg-transparent p-8 flex flex-col gap-6 transition-colors duration-300 hover:bg-[#FEFDEC]"
               >
                 <div>
                   <p className="text-xs font-bold uppercase text-[#5C81FA] tracking-widest">
                     {plan.tag}
                   </p>
-                  <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] [font-family:var(--font-heading)]">
+                  <h3 className="mt-3 text-3xl font-bold text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300 [font-family:var(--font-heading)]">
                     {plan.name}
                   </h3>
                 </div>
 
                 <div>
-                  <p className="inline-block rounded-full border border-[#FEFDEC] px-4 py-1 text-xs text-[#FEFDEC]">
+                  <p className="inline-block rounded-full border border-[#FEFDEC] group-hover:border-[#2b2b2a] px-4 py-4 text-xs text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
                     {plan.delivery}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-2xl font-bold text-[#FEFDEC]">
+                  <p className="text-2xl font-bold text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
                     {plan.price}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-[#FEFDEC]">
+                  <p className="mt-2 text-sm leading-relaxed text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
                     {plan.description}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold uppercase mb-3">
+                  <p className="text-xs font-semibold uppercase mb-3 text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
                     {t("Pricing.includesLabel")}
                   </p>
                   <ul className="space-y-2">
                     {plan.featurePrefix && (
-                      <li className="text-sm text-[#FEFDEC] flex gap-2">
-                        <span className="text-[#9df74d]">•</span>
+                      <li className="text-sm text-[#FEFDEC] group-hover:text-[#2b2b2a] flex gap-2 transition-colors duration-300">
+                        <span className="text-[##FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">•</span>
                         <span>{plan.featurePrefix}</span>
                         <span className="text-[#5C81FA]">
                           {plan.featureHighlight}
@@ -516,16 +516,16 @@ const Hero = () => {
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="text-sm text-[#FEFDEC] flex gap-2"
+                        className="text-sm text-[#FEFDEC] group-hover:text-[#2b2b2a] flex gap-2 transition-colors duration-300"
                       >
-                        <span className="text-[#9df74d]">•</span>
+                        <span className="text-[##FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">•</span>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <button className="w-full rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-200 hover:bg-[#7fd940] mt-auto">
+                <button className="w-full rounded-lg bg-[#FEFDEC] group-hover:bg-[#2b2b2a] group-hover:text-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-300 mt-auto">
                   {t("Pricing.cta")}
                 </button>
               </div>

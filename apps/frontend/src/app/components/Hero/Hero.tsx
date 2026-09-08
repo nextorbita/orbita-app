@@ -463,7 +463,7 @@ const Hero = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      {/* <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+      <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
         <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
           <h2 className="text-center text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
             {t("Pricing.title")}
@@ -492,7 +492,7 @@ const Hero = () => {
 
                 <div>
                   <p className="text-2xl font-bold text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
-                    {plan.price}
+                    {/* {plan.price} */}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-[#FEFDEC] group-hover:text-[#2b2b2a] transition-colors duration-300">
                     {plan.description}
@@ -532,7 +532,7 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials Section */}
       {/* <section

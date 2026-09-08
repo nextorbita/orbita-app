@@ -463,7 +463,7 @@ const Hero = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
+      {/* <section className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32">
         <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-16 px-6 md:px-10 lg:px-16">
           <h2 className="text-center text-4xl font-medium leading-tight text-[#9df74d] [font-family:var(--font-heading)] lg:text-5xl">
             {t("Pricing.title")}
@@ -532,10 +532,10 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section
+      {/* <section
         id="testimonials"
         className="relative isolate overflow-hidden bg-[#282828] text-[#f0f0ec] py-20 md:py-32"
       >
@@ -545,7 +545,7 @@ const Hero = () => {
           </h2>
 
           <div className="flex w-full flex-col gap-8">
-            {/* Top row — 2 cards */}
+       
             <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
               {[
                 { color: "#6b7dff", image: "/foto_Viviana.png" },
@@ -591,7 +591,7 @@ const Hero = () => {
               })}
             </div>
 
-            {/* Bottom row — 1 card centered */}
+
             <div className="flex justify-center">
               <div className="w-full rounded-3xl border-2 border-dashed border-[#ff6b6b] bg-transparent p-8 flex flex-col gap-6 lg:max-w-[calc(50%-16px)]">
                 <div className="flex items-center gap-4">
@@ -620,7 +620,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Portfolio Section */}
       <section

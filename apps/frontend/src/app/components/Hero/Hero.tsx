@@ -525,9 +525,12 @@ const Hero = () => {
                   </ul>
                 </div>
 
-                <button className="w-full rounded-lg bg-[#FEFDEC] group-hover:bg-[#2b2b2a] group-hover:text-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-300 mt-auto">
+                <a
+                  href="#contact-form"
+                  className="mt-auto flex w-full items-center justify-center rounded-lg bg-[#FEFDEC] py-3 font-semibold text-[#2b2b2a] transition-colors duration-300 group-hover:bg-[#2b2b2a] group-hover:text-[#FEFDEC]"
+                >
                   {t("Pricing.cta")}
-                </button>
+                </a>
               </div>
             ))}
           </div>
